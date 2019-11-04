@@ -1,0 +1,66 @@
+/*Use for page titles*/
+h1 {
+  font-size: 55px;
+  font-family: 'Avenir';
+  font-weight: 900;
+  color: rgb(10,10,10);
+}
+h1.light {
+  color: rgb(245,245,245);
+}
+/*Use for section titles*/
+h2 {
+  font-size: 35px;
+  font-family: 'Avenir';
+  font-weight: 900
+}
+h2.light {
+  color: rgb(240,240,240);
+}
+h2.dark {
+  color: rgb(15,15,15);
+}
+/*Use for first-level headers within sections*/
+h3 {
+  font-weight: 900;
+  font-size: 25px;
+  font-family: 'Avenir';
+  color: rgb(30,30,30);
+}
+h3.light {
+  color: rgb(225,225,225);
+}
+/*Use for second-level headers*/
+h4 {
+  font-weight: 500;
+  font-size: 20px;
+  font-family: 'Avenir';
+}
+h4.dark {
+  color: rgb(40,40,40);
+}
+/*Use for overlines/buttons*/
+h5 {
+  font-size: 15px;
+  font-family: 'Avenir';
+  color: rgb(125,125,125);
+}
+h6 {/*Use for captions*/
+  font-size: 12px;
+  font-family: 'Avenir';
+  color: rgb(30,30,30);
+  font-weight: 500;
+}
+h6.light {
+  color: rgb(225,225,225);
+}
+/*Use this exclusively for my paragraph texts*/
+p {
+  color: rgb(100,100,100);
+  font-family: 'Avenir';
+  font-weight: lighter;
+  font-size: 15px;
+}
+p.light {
+  color: rgb(190,190,190);
+}
