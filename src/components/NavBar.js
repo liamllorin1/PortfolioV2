@@ -17,11 +17,12 @@ const scrollFunction = function(e) {
   e.preventDefault();
   let section = e.currentTarget.getAttribute('href');
   $("html, body").animate({
-      scrollTop: $(section).offset().top
+      scrollTop: $(section).offset().top + 1
   });
 }
 
-export default function NavBar() {//THIS ENTIRE BLOCK IS RE-RENDERED ON SETSTATE
+export default function NavBar(props) {//THIS ENTIRE BLOCK IS RE-RENDERED ON SETSTATE
+  let { navLinks } = props;
   const [activeIndex, setActiveIndex] = useState(0);
   useEffect(() => {
     window.addEventListener("scroll", event => {
@@ -43,38 +44,22 @@ export default function NavBar() {//THIS ENTIRE BLOCK IS RE-RENDERED ON SETSTATE
 
   return (
   <nav className = {styles.navBarContainer}>
-    <a href="#topSection" className = {styles.navLink} onClick = {scrollFunction}>
-      <div className = {styles.navTab}style = {activeIndex === 0 ? highlightTabStyle : dormantTabStyle}>
-        <h6 className = {styles.navTabText}style = {activeIndex === 0 ? highlightTextStyle : dormantTextStyle}>Home</h6>
-      </div>
-    </a>
-    <a href="#techSection"className = {styles.navLink} onClick = {scrollFunction}>
-      <div className = {styles.navTab}style = {activeIndex === 1 ? highlightTabStyle : dormantTabStyle}>
-        <h6 className = {styles.navTabText}style = {activeIndex === 1 ? highlightTextStyle : dormantTextStyle}>Interface Design</h6>
-      </div>
-    </a>
-    <a href="#MESection"className = {styles.navLink} onClick = {scrollFunction}>
-      <div className = {styles.navTab}style = {activeIndex === 2 ? highlightTabStyle : dormantTabStyle}>
-        <h6 className = {styles.navTabText}style = {activeIndex === 2 ? highlightTextStyle : dormantTextStyle}>Industrial Design</h6>
-      </div>
-    </a>
-    <a href="#designThinking" className = {styles.navLink} onClick = {scrollFunction}>
-      <div className = {styles.navTab}style = {activeIndex === 3 ? highlightTabStyle : dormantTabStyle}>
-        <h6 className = {styles.navTabText}style = {activeIndex === 3 ? highlightTextStyle : dormantTextStyle} >Design Thinking</h6>
-      </div>
-    </a>
-    <a href="#photographyArt"className = {styles.navLink} onClick = {scrollFunction}>
-      <div className = {styles.navTab}style = {activeIndex === 4 ? highlightTabStyle : dormantTabStyle}>
-        <h6 className = {styles.navTabText}style = {activeIndex === 4 ? highlightTextStyle : dormantTextStyle}>Photography + Art</h6>
-      </div>
-    </a>
+    {navLinks.map((navLink, index) => {
+      return (
+        <a href = {navLink.href} className = {styles.navLink} onClick = {scrollFunction}>
+          <div className = {styles.navTab} style = {activeIndex === index ? highlightTabStyle : dormantTabStyle}>
+            <h6 className = {styles.navTabText}style = {activeIndex === index ? highlightTextStyle : dormantTextStyle}>{navLink.tabTitle}</h6>
+          </div>
+        </a>
+      )
+    })}
   </nav>)
 }
 
 const styles = {
   navBarContainer:css`
   position: fixed;
-   top: 25px;
+  top: 25px;
   right: 25px;
   background-color: rgb(30,30,30);
   z-index: 100;

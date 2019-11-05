@@ -15,10 +15,10 @@ export default function ProcessSection(props) {
   let { designResearchObj, conceptualizationObj } = props;
 
   return(
-    <section className = {styles.processSection}>
+    <div className = {styles.processSection}>
       <DesignResearchSection designResearchObj = {designResearchObj}/>
       <ConceptualizationSection conceptualizationObj = {conceptualizationObj}/>
-    </section>
+    </div>
   )
 }
 
@@ -26,7 +26,6 @@ const styles = {
   processSection:css`
     width: 100%;
     background-color: rgb(245,245,245);
-    margin-top: 50px;
     position: relative;
   `,
 }

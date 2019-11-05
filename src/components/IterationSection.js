@@ -9,7 +9,7 @@ import Breakthrough from '../components/Breakthrough'
 export default function IterationSection(props) {
   let { iterations } = props.iterationObj;
   return(
-    <section className = {styles.iterationSection}>
+    <section className = {styles.iterationSection} id = 'iterationSection'>
         <CaseStudyTitle title='Iterations.' light={false}/>
       {iterations.map((iteration, index) => {
         return (
@@ -24,7 +24,7 @@ export default function IterationSection(props) {
               <div className = {styles.descriptionContainer}>
                 <div className = {styles.iterationImage} style = {{backgroundImage: 'url(' + iteration.image + ')'}}></div>
                 <div className = {styles.paragraphContainer}>
-                  <h4>How'd it go?</h4>
+                  <h4>Iteration Results.</h4>
                   <p>{iteration.description}</p>
                 </div>
               </div>
@@ -42,7 +42,7 @@ export default function IterationSection(props) {
 const styles = {
   iterationSection:css`
     width: 100%;
-    padding: 100px 0;
+    padding: 150px 0;
     background-color: rgb(250,250,250);
   `,
   iterationContainer:css`

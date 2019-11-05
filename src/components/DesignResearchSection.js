@@ -9,7 +9,7 @@ import CaseStudyTitle from '../components/CaseStudyTitle'
 export default function DesignResearchSection(props) {
   let { users, interviewFindings, howMightText, conceptModels, currentUIPatterns, initialThoughtProcessParagraphs } = props.designResearchObj;
   return(
-    <div className = {styles.DesignResearchContainer}>
+    <section className = {styles.DesignResearchContainer} id = 'designResearchSection'>
       <CaseStudyTitle light = {false} title='Design Research.'/>
       {howMightText && <h4 className = {styles.howMightText}>{howMightText}</h4>}
       {conceptModels && <div className = {styles.conceptModelsContainer}>
@@ -30,14 +30,13 @@ export default function DesignResearchSection(props) {
         </div>
         <div class = 'spacer'></div>
       </div>
-    </div>
+    </section>
   )
 }
 
 const styles = {
   DesignResearchContainer:css`
-    padding-top: 100px;
-    padding-bottom: 150px;
+    padding: 150px 0;
   `,
   howMightText:css`
     color: rgb(150,150,150);

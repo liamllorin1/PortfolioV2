@@ -9,9 +9,9 @@ import CaseStudyTitle from '../components/CaseStudyTitle'
 
 
 export default function ConceptualizationSection(props) {
-  let { conceptSketches } = props.conceptualizationObj;
+  let { conceptSketches, conceptReflectionParagraphs } = props.conceptualizationObj;
   return(
-    <div className = {styles.conceptualizationContainer}>
+    <section className = {styles.conceptualizationContainer} id = 'conceptualizationSection'>
       <CaseStudyTitle light = {true} title='Conceptualization.'/>
       {conceptSketches && <div className = {styles.sketchesContainer}>
         <div class = 'spacer'></div>
@@ -24,21 +24,21 @@ export default function ConceptualizationSection(props) {
       <Breakthrough margin={spacing.desktop.largeMargin}/>
       <div className = {styles.conceptDescriptionContainer}>
         <div class = 'spacer'></div>
-        <div>
+        <div style = {{marginBottom: '50px'}}>
           <h3 class = 'light'>Concept Iteration Reflection.</h3>
-          <p class = 'light'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <p  class = 'light'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          {conceptReflectionParagraphs.map(paragraphText => {
+            return <p class = 'light'>{paragraphText}</p>;
+          })}
         </div>
         <div class = 'spacer'></div>
       </div>
-    </div>
+    </section>
   )
 }
 
 const styles = {
   conceptualizationContainer:css`
-    padding-top: 100px;
-    padding-bottom: 150px;
+    padding: 150px 0;
     background-image: linear-gradient(45deg, rgb(15, 15, 15), rgb(45, 45, 45));
   `,
   sketchesContainer:css`

@@ -8,7 +8,7 @@ import CaseStudyTitle from '../components/CaseStudyTitle'
 export default function FrameSection(props) {
   let { categoryText, titleText, backgroundText, challengeText, glamourShotImage } = props.frameObj;
   return(
-    <section className = {styles.frameSection}>
+    <section className = {styles.frameSection} id = 'frameSection'>
       <CaseStudyTitle title = {titleText} overlineText = {categoryText}/>
       <div className = {styles.glamourShotContainer}>
         <div class = 'spacer'></div>
@@ -37,7 +37,7 @@ export default function FrameSection(props) {
 const styles = {
   frameSection:css`
     width: 100%;
-    padding-top: 100px;
+    padding: 150px 0;
     background-color: rgb(250,250,250);
   `,
   glamourShotContainer:css`

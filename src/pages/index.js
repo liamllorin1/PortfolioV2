@@ -134,7 +134,7 @@ let sections = [
 //to add: <WIP/> as necessary
 const IndexPage = () => (
   <>
-    <NavBar/>
+    <NavBar navLinks = {[{href: '#topSection', tabTitle: 'Home'},{href: '#techSection', tabTitle: 'Interface Design'}, {href: '#MESection', tabTitle: 'Industrial Design'}, {href: '#designThinking', tabTitle: 'Design Thinking'}, {href: '#photographyArt', tabTitle: 'Photography + Art'}]}/>
     {sections.map((section) => {
       return <StandardSection sectionObj = {section}/>
     })}
