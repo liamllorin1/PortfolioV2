@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { css, cx } from 'emotion'
-import logoImage from '../images/mainLogoDark.jpg'
+import logoImage from '../images/InvertedPendulumLogo/mainLogoDark.jpg'
 import automataImage from '../images/leverSystem.jpg'
 
 export default function MESectionImage() {

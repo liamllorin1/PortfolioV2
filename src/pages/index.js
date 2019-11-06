@@ -8,7 +8,7 @@ import NavBar from "../components/NavBar"
 import StandardSection from "../components/StandardSection"
 import SEO from "../components/seo"
 import TechSection from "../components/TechSection"
-import logoImage from '../images/mainLogoDark.jpg'
+import logoImage from '../images/InvertedPendulumLogo/mainLogoDark.jpg'
 import profPic from '../images/ProfPic4.jpg'
 import automataImage from '../images/leverSystem.jpg'
 import facebookImage from '../images/facebookScreenshot.png'
@@ -29,18 +29,18 @@ let sections = [
     sectionId: "topSection",
     image: profPic,
     textColor: 'light',
-    button: <Link to = {'/WIPPage/'} style = {{textDecoration: 'none'}}><ButtonBold buttonColor = "rgb(60,60,60)" titleColor = "rgb(240,240,240)" title = {"Find out more"}/></Link>,
+    button: <Link to = {'/WIPPage/'} style = {{textDecoration: 'none'}}><ButtonBold buttonColor = "rgb(240,240,240)" titleColor = "rgb(20,20,20)" title = {"Find out more"}/></Link>,
     resume: true
   },
   {
     title: "Facebook Front End Engineering.",
-    caption: "This Winter I'lll be working alongside Product Designers to develop the next generation of web platform features/updates as part of Facebook's prestige Front End intern program. Whatever product I work on, I'll be building front-end systems while incorporating Facebook frameworks/components, engaging in design reviews, and much more.",
+    caption: "This Winter I'll be working alongside Product Designers to develop the next generation of web platform features/updates as part of Facebook's prestige Front End intern program. Whatever product I work on, I'll be building front-end systems while incorporating Facebook frameworks/components, engaging in design reviews, and much more.",
     leftGradient: "linear-gradient(45deg, rgb(247, 247, 247), rgb(255, 255, 255))",
     rightGradient: "linear-gradient(45deg, rgb(0, 191, 255), rgb(0, 191, 255))",
     image: facebookImage,
     textColor: 'dark',
     sectionId: "techSection",
-    button: <Link to = {'/WIPPage/'} style = {{textDecoration: 'none'}}><ButtonBold titleColor = "rgb(240,240,240)" buttonColor = "rgb(20,20,20)" title = {"Find out more"}/></Link>,
+    button: <Link to = {'/FacebookFrontEndCaseStudy/'} style = {{textDecoration: 'none'}}><ButtonBold titleColor = "rgb(240,240,240)" buttonColor = "rgb(20,20,20)" title = {"Find out more"}/></Link>,
     skillTags: [
       { textColor: 'rgb(20,20,20)', tagColor: 'rgb(250,250,250)', title: 'Web Dev/Design'},
       { textColor: 'rgb(20,20,20)', tagColor: 'rgb(250,250,250)', title: 'UI/UX'},
@@ -63,7 +63,7 @@ let sections = [
     ]
   },
   {
-    title: "STRONGSUIT Web Design/Dev Business.",
+    title: "STRONGSUIT Web Design Freelance Business.",
     caption: "In late 2017, I designed 4 responsive sites for business and clients (landing pages/personal sites). These sites I developed in HTML, CSS, Sass, Javascript, jQuery, and some Python for 300+ hours for clients.",
     leftGradient: "linear-gradient(45deg, rgb(247, 247, 247), rgb(255, 255, 255))",
     rightGradient: "linear-gradient(45deg, rgb(58, 67, 84), rgb(58, 67, 84))",
@@ -92,19 +92,6 @@ let sections = [
     ]
   },
   {
-    title: "Automata Vending Machine.",
-    caption: "I constructed foam core mechanisms to simulate functionality before developing an interactive vending-machine w/ 4+ mechanisms triggered by user and marble.",
-    leftGradient: "linear-gradient(45deg, rgb(240, 240, 240), rgb(255, 255, 255))",
-    rightGradient: "linear-gradient(45deg, rgb(250, 250, 250), rgb(200, 200, 200))",
-    image: automataImage,
-    textColor: 'dark',
-    button: <Link to = {'/WIPPage/'} style = {{textDecoration: 'none'}}><ButtonBold titleColor = "rgb(240,240,240)" buttonColor = "rgb(20,20,20)" title = {"Find out more"}/></Link>,
-    skillTags: [
-      { textColor: 'rgb(20,20,20)', tagColor: 'rgb(250,250,250)', title: 'Concept Visualization'},
-      { textColor: 'rgb(20,20,20)', tagColor: 'rgb(250,250,250)', title: 'Prototyping'}
-    ]
-  },
-  {
     title: "Oaxacan Kitchen Mobile Prototypes.",
     caption: "Under the instruction of David Kelley (founder of IDEO), my team and I performed field work, interviewing food truck vendors and customers. After honing in on a customer need, we devised two prototyped solutions and tested the solutions on-site while sampling user feedback.",
     leftGradient: "linear-gradient(45deg, rgb(240, 240, 240), rgb(255, 255, 255))",
@@ -120,14 +107,14 @@ let sections = [
     ]
   },
   {
-    title: "Photography + Art.",
+    title: "Photography.",
     caption: "If you please, check out what I've been doing in my free time!",
     leftGradient: "linear-gradient(45deg, rgb(15, 15, 15), rgb(45, 45, 45))",
     rightGradient: "linear-gradient(45deg, rgb(30, 30, 30), rgb(15, 15, 15))",
     sectionId: "photographyArt",
     image: cameras,
     textColor: 'light',
-    button: <Link to = {'/WIPPage/'} style = {{textDecoration: 'none'}}><ButtonBold titleColor = "rgb(240,240,240)" buttonColor = "rgb(20,20,20)" title = {"Find out more"}/></Link>
+    button: <Link to = {'/Photography/'} style = {{textDecoration: 'none'}}><ButtonBold buttonColor = "rgb(240,240,240)" titleColor = "rgb(20,20,20)" title = {"Find out more"}/></Link>
   },
 ]
 

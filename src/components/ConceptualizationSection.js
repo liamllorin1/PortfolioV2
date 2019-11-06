@@ -4,7 +4,6 @@ import { css, cx } from 'emotion'
 import "../styles/fonts.css"
 import spacing from '../styles/spacingConstants.js'
 import ConceptSketches from '../components/ConceptSketches'
-import Breakthrough from '../components/Breakthrough'
 import CaseStudyTitle from '../components/CaseStudyTitle'
 
 
@@ -21,7 +20,6 @@ export default function ConceptualizationSection(props) {
           </div>
         <div class = 'spacer'></div>
       </div>}
-      <Breakthrough margin={spacing.desktop.largeMargin}/>
       <div className = {styles.conceptDescriptionContainer}>
         <div class = 'spacer'></div>
         <div style = {{marginBottom: '50px'}}>

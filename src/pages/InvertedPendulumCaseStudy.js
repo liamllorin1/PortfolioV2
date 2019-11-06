@@ -2,23 +2,26 @@ import React from "react"
 import { Link } from "gatsby"
 import { css, cx } from 'emotion'
 import spacing from '../styles/spacingConstants.js'
-import glamourShotImage from '../images/mainLogoDark.jpg'
-import threeLogosImage from '../images/threeLogos.jpg'
+import glamourShotImage from '../images/InvertedPendulumLogo/mainLogoDark.jpg'
+import threeLogosImage from '../images/InvertedPendulumLogo/threeLogos.jpg'
 import FrameSection from '../components/FrameSection'
 import DesignResearchSection from '../components/DesignResearchSection'
 import ConceptualizationSection from '../components/ConceptualizationSection'
 import IterationSection from '../components/IterationSection'
 import SolutionSection from '../components/SolutionSection'
-import conceptModel1 from '../images/conceptModel1.jpeg'
+import CaseStudyFooter from '../components/CaseStudyFooter'
+import orangeLogo from '../images/InvertedPendulumLogo/orangeLogo.jpg'
+import martinLutherKingStatue from '../images/InvertedPendulumLogo/martinLutherKingStatue.png'
 import conceptModel2 from '../images/conceptModel2.jpeg'
 import conceptModel3 from '../images/conceptModel3.jpeg'
 import conceptModel4 from '../images/conceptModel4.jpeg'
 import conceptSketch1 from '../images/conceptSketch2.jpg'
 import conceptSketch2 from '../images/conceptSketch1.jpg'
-import iteration1 from '../images/iteration1.jpg'
-import iteration2 from '../images/iteration2.jpg'
-import iteration3 from '../images/iteration3.jpg'
-import mainLogoLight from '../images/mainLogoLight.jpg'
+import iteration1 from '../images/InvertedPendulumLogo/iteration1.jpg'
+import iteration2 from '../images/InvertedPendulumLogo/iteration2.jpg'
+import iteration3 from '../images/InvertedPendulumLogo/iteration3.jpg'
+import mainLogoLight from '../images/InvertedPendulumLogo/mainLogoLight.jpg'
+import logoHandHeld from '../images/InvertedPendulumLogo/logoHandHeld.jpg'
 import NavBar from '../components/NavBar'
 
 
@@ -33,12 +36,12 @@ export default function InvertedPendulumCaseStudy(props) {
   };
   let designResearchObj = {
       howMightText: 'How might I create a logo with interactivity and motion?',
-      conceptModels: [{image: conceptModel1, caption: 'Brilliant lettering'}, {image: conceptModel2, caption: 'Detailed contours'}, {image: conceptModel3, caption: 'Exaggerated edges for "pop"'}, {image: conceptModel4, caption: 'Cut off partially!'}],
-      initialThoughtProcessParagraphs: ['Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.','Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.']
+      conceptModels: [{image: martinLutherKingStatue, caption: '"Emerging" from the rock face!'}, {image: orangeLogo, caption: 'Simplicity with repeated letters'}, {image: conceptModel3, caption: 'Exaggerated thickness for "pop"'}, {image: conceptModel4, caption: 'Cut off partially!'}],
+      initialThoughtProcessParagraphs: ['I had a lot of ideas floating in my head. "How might I create this sense of motion and aspect of interactivity with two L\'s?", I asked myself. I drew inspiration from the Martin Luther King statue, wherein, despite its obviously static form, it reflected Dr. King almost emerging out into the open.','I also appreciated the simplicity found in other logos that tackled the repeating letter challenge. I myself needed to find a way to combine two letters, L\'s specifically, in a creative way. I knew I wanted a heavily weight font-size, and I appreciated the idea of the letters being slightly cut off while still being legible.']
   };
   let conceptualizationObj = {
     conceptSketches: [{image: conceptSketch1, caption: 'Beginning sketches'}, {image: conceptSketch2, caption: 'Focus on inverted pendulum design!'}],
-    conceptReflectionParagraphs: ['']
+    conceptReflectionParagraphs: ['After sketching out bland designs, I was frustrated with hitting roadblocks. My two dimensional logos did not have the life that I needed for my logo to be a physical, interactive "product". But as you can see by the sketches, I hit a breakthrough when I realized that an inverted pendulum would breathe life into otherwise stationary letters. At the same time, the L\'s were able to "emerge" from the inverted pendulum\'s tilted rectangular face, and my objective to create a sense of motion was fulfilled!']
   };
   let iterationObj = {
     iterations: [
@@ -48,9 +51,11 @@ export default function InvertedPendulumCaseStudy(props) {
     ]
   };
   let solutionObj = {
-    glamourShotImage: glamourShotImage,
+    glamourShotImage: logoHandHeld,
     secondImage: threeLogosImage,
-    auxiliaryImages: [mainLogoLight],
+    auxiliaryImages: [mainLogoLight, glamourShotImage],
+    title: 'Inverted Pendulum Logo.',
+    caption: 'The final solution.'
   }
 
   return(
@@ -61,6 +66,7 @@ export default function InvertedPendulumCaseStudy(props) {
       <ConceptualizationSection conceptualizationObj = {conceptualizationObj}/>
       <IterationSection iterationObj = {iterationObj}/>
       <SolutionSection solutionObj = {solutionObj}/>
+      <CaseStudyFooter/>
     </>
   )
 }

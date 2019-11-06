@@ -32,8 +32,8 @@ const styles = {
   footerContainer:css`
     display: grid;
     grid-template-columns: ${spacing.desktop.mediumMargin} 2fr 2fr ${spacing.desktop.mediumMargin};
-    height: min-content;
-    background-image: linear-gradient(45deg, rgb(15, 15, 15), rgb(5, 5, 5));
+    background-image: linear-gradient(80deg, rgb(15, 15, 15), rgb(50, 50, 50));
+    padding: 150px 0;
   `,
   leftBack:css`
     /* background-color: rgb(10,10,10); */
@@ -50,21 +50,19 @@ const styles = {
     padding-left: 25px;
   `,
   reachOutText:css`
-    color: rgb(170,170,170);
+    color: rgb(220,220,220);
     margin: 0;
-    line-height: 300px;
     font-weight: 700;
     display: inline-block;
   `,
   icon:css`
-    color: rgb(90,90,90);
+    color: rgb(150,150,150);
     margin: 0;
     font-weight: 100;
     font-size: 30px;
   `,
   email:css`
-    color: rgb(90,90,90);
-    line-height: 300px;
+    color: rgb(150,150,150);
     margin: 0;
     font-weight: 100;
     margin-left: 20px;
@@ -80,7 +78,7 @@ const styles = {
     display: flex;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 50px;
+    column-gap: 25px;
     position: absolute;
     top: 50%;
     left: 50%;

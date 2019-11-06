@@ -5,34 +5,38 @@ import "../styles/fonts.css"
 import spacing from '../styles/spacingConstants.js'
 import CaseStudyTitle from '../components/CaseStudyTitle'
 import Breakthrough from '../components/Breakthrough'
+import ButtonBold from '../components/ButtonBold'
 
 export default function SolutionSection(props) {
-  let { glamourShotImage, secondImage, auxiliaryImages } = props.solutionObj;
+  let { glamourShotImage, secondImage, auxiliaryImages, title, caption, isPhotography } = props.solutionObj;
   return(
-    <section className = {styles.solutionSection} id = "solutionSection">
+    <section className = {styles.solutionSection} id = "solutionSection" style = {isPhotography ? {backgroundColor: 'rgb(250,250,250)'} : {backgroundColor: 'rgb(240,240,240)'}}>
       <div className = {styles.firstRow}>
         <div class = 'spacer'></div>
         <div className = {styles.leftBack}>
           <h5>Glamour Shots</h5>
-          <h1 style = {{marginTop: 0}}>Inverted Pendulum Logo</h1>
-          <p>Thank you for taking the time to read this far! </p>
+          <h1 style = {{marginTop: 0}}>{title}</h1>
+          <p style = {{marginBottom: '25px', maxWidth: '50%'}}>{caption}</p>
+          {isPhotography && <a href = 'https://www.instagram.com/liamllor/?hl=en' style = {{textDecoration: 'none'}}><ButtonBold title = 'Instagram' buttonColor = 'rgb(30,30,30)' titleColor = 'rgb(250,250,250)'/></a>}
         </div>
         <div className = {cx(styles.imageDiv, styles.glamourShot)} style = {{backgroundImage: 'url(' + glamourShotImage + ')'}}>
         </div>
         <div class = 'spacer'></div>
       </div>
-      <div className = {styles.secondRow}>
+      {secondImage && <div className = {styles.secondRow}>
         <div class = 'spacer'></div>
         <div className = {cx(styles.imageDiv, styles.secondShot)} style = {{backgroundImage: 'url(' + secondImage + ')'}}>
         </div>
         <div class = 'spacer'></div>
-      </div>
+      </div>}
       <div className = {styles.remainingImages}>
         <div class = 'spacer'></div>
         <div>
-        {auxiliaryImages.map(image => {
-          return <div className = {cx(styles.imageDiv, styles.auxiliaryImage)} style = {{backgroundImage: 'url(' + image + ')', height: '400px'}}></div>
-        })}
+        <div className = {styles.auxiliaryImagesContainer}>
+          {auxiliaryImages.map(image => {
+            return <div className = {cx(styles.imageDiv, styles.auxiliaryImage)} style = {{backgroundImage: 'url(' + image + ')', height: '400px'}}></div>
+          })}
+        </div>
         </div>
         <div class = 'spacer'></div>
       </div>
@@ -42,13 +46,12 @@ export default function SolutionSection(props) {
 
 const styles = {
   solutionSection:css`
-    background-color: rgb(240,240,240);
     padding: 150px 0;
   `,
   firstRow:css`
     display: grid;
     grid-template-columns: ${spacing.desktop.mediumMargin} 1fr 1fr ${spacing.desktop.mediumMargin};
-    margin-bottom: 50px;
+    margin-bottom: 25px;
   `,
   leftBack:css`
     padding-right: 100px;
@@ -60,11 +63,12 @@ const styles = {
   `,
   glamourShot:css`
     height: 400px;
+    margin-left: 12.5px;
   `,
   secondRow:css`
     display: grid;
     grid-template-columns: ${spacing.desktop.mediumMargin} auto ${spacing.desktop.mediumMargin};
-    margin-bottom: 50px;
+    margin-bottom: 25px;
   `,
   secondShot:css`
     height: 550px;
@@ -74,6 +78,12 @@ const styles = {
     grid-template-columns: ${spacing.desktop.mediumMargin} auto ${spacing.desktop.mediumMargin};
   `,
   auxiliaryImage:css`
-    width: 50%;
+
+  `,
+  auxiliaryImagesContainer:css`
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 25px;
+    row-gap: 25px;
   `
 }
