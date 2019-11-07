@@ -15,7 +15,7 @@ export default function ConceptualizationSection(props) {
       {conceptSketches && <div className = {styles.sketchesContainer}>
         <div class = 'spacer'></div>
           <div>
-            <h3 class = 'light'>Concept Sketches</h3>
+            <h3 class = 'light'>Concept Sketches.</h3>
             <ConceptSketches conceptSketches = {conceptSketches}/>
           </div>
         <div class = 'spacer'></div>
@@ -23,7 +23,7 @@ export default function ConceptualizationSection(props) {
       <div className = {styles.conceptDescriptionContainer}>
         <div class = 'spacer'></div>
         <div style = {{marginBottom: '50px'}}>
-          <h3 class = 'light'>Concept Iteration Reflection.</h3>
+          <h4 class = 'light'>Concept Iteration Reflection.</h4>
           {conceptReflectionParagraphs.map(paragraphText => {
             return <p class = 'light'>{paragraphText}</p>;
           })}

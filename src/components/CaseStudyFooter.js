@@ -25,7 +25,7 @@ export default function CaseStudyFooter(props) {
 
 const styles = {
   footerSection:css`
-    background-image: linear-gradient(80deg, rgb(30, 30, 30), rgb(50, 50, 50), rgb(90, 90, 90));
+    background-image: linear-gradient(80deg, rgb(15, 15, 15), rgb(50, 50, 50));
     padding: 150px 0;
     display: grid;
     grid-template-columns: ${spacing.desktop.mediumMargin} auto ${spacing.desktop.mediumMargin};

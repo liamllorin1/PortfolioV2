@@ -43,26 +43,24 @@ const styles = {
   iterationSection:css`
     width: 100%;
     padding: 150px 0;
-    background-color: rgb(250,250,250);
+    background-color: rgb(240,240,240);
   `,
   iterationContainer:css`
     display: grid;
     grid-template-columns: ${spacing.desktop.largeMargin} auto ${spacing.desktop.largeMargin};
-    margin-bottom: 150px;
+    margin-bottom: 200px;
   `,
   iterationOverlineText:css`
-    text-align: center;
     margin-bottom: 0;
   `,
   iterationTitleText:css`
-    text-align: center;
+    margin-top: 25px;
   `,
   titleContainer:css`
     margin-bottom: 50px;
+    text-align: center;
   `,
   descriptionContainer:css`
-    display: grid;
-    grid-template-columns: 55% 45%;
     width: 100%;
   `,
   iterationImage:css`
@@ -70,9 +68,11 @@ const styles = {
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover; /* Resize the background image to cover the entire container */
     width: 100%;
-    height: 300px;
+    height: 350px;
+    margin-bottom: 50px;
   `,
   paragraphContainer:css`
+    padding-right: 100px;
     padding-left: 50px;
   `
 }

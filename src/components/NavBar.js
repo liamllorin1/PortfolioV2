@@ -22,7 +22,7 @@ const scrollFunction = function(e) {
 }
 
 export default function NavBar(props) {//THIS ENTIRE BLOCK IS RE-RENDERED ON SETSTATE
-  let { navLinks } = props;
+  let { navLinks, hideHome } = props;
   const [activeIndex, setActiveIndex] = useState(0);
   useEffect(() => {
     window.addEventListener("scroll", event => {
@@ -43,17 +43,27 @@ export default function NavBar(props) {//THIS ENTIRE BLOCK IS RE-RENDERED ON SET
   }, [activeIndex]);
 
   return (
-  <nav className = {styles.navBarContainer}>
-    {navLinks.map((navLink, index) => {
-      return (
-        <a href = {navLink.href} className = {styles.navLink} onClick = {scrollFunction}>
-          <div className = {styles.navTab} style = {activeIndex === index ? highlightTabStyle : dormantTabStyle}>
-            <h6 className = {styles.navTabText}style = {activeIndex === index ? highlightTextStyle : dormantTextStyle}>{navLink.tabTitle}</h6>
+    <div className = {styles.navBarContainer}>
+      {!hideHome && (
+        <Link to = {'/'} style = {{textDecoration: 'none'}}>
+          <div className = {cx(styles.navTab, styles.homeTab)}>
+            <h6 className = {cx(styles.navTabText, styles.homeText)}>Home Page</h6>
           </div>
-        </a>
-      )
+        </Link>
+      )}
+    <nav>
+      {navLinks.map((navLink, index) => {
+        return (
+          <a href = {navLink.href} className = {styles.navLink} onClick = {scrollFunction}>
+            <div className = {styles.navTab} style = {activeIndex === index ? highlightTabStyle : dormantTabStyle}>
+              <h6 className = {styles.navTabText}style = {activeIndex === index ? highlightTextStyle : dormantTextStyle}>{navLink.tabTitle}</h6>
+            </div>
+          </a>
+        )
     })}
-  </nav>)
+    </nav>
+  </div>
+  )
 }
 
 const styles = {
@@ -71,10 +81,18 @@ const styles = {
     height: 50px;
     margin: 0;
   `,
+  homeTab:css`
+    background-color: rgb(60,60,60);
+  `,
+  homeText:css`
+    color: rgb(250,250,250);
+    font-weight: 800;
+  `,
   navTabText:css`
   line-height: 50px;
   margin-block-start: 0em;
   margin-block-end: 0em;
+  margin: 0;
   `,
   navLink:css`
     text-decoration: none;

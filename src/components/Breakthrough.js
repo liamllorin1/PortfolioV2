@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import { css, cx } from 'emotion'
 import "../styles/fonts.css"
 import spacing from '../styles/spacingConstants.js'

@@ -8,9 +8,9 @@ import Breakthrough from '../components/Breakthrough'
 import ButtonBold from '../components/ButtonBold'
 
 export default function SolutionSection(props) {
-  let { glamourShotImage, secondImage, auxiliaryImages, title, caption, isPhotography } = props.solutionObj;
+  let { glamourShotImage, largeImages, smallImages, title, caption, isPhotography } = props.solutionObj;
   return(
-    <section className = {styles.solutionSection} id = "solutionSection" style = {isPhotography ? {backgroundColor: 'rgb(250,250,250)'} : {backgroundColor: 'rgb(240,240,240)'}}>
+    <section className = {styles.solutionSection} id = "solutionSection" style = { {backgroundColor: 'rgb(250,250,250)'}}>
       <div className = {styles.firstRow}>
         <div class = 'spacer'></div>
         <div className = {styles.leftBack}>
@@ -23,17 +23,21 @@ export default function SolutionSection(props) {
         </div>
         <div class = 'spacer'></div>
       </div>
-      {secondImage && <div className = {styles.secondRow}>
-        <div class = 'spacer'></div>
-        <div className = {cx(styles.imageDiv, styles.secondShot)} style = {{backgroundImage: 'url(' + secondImage + ')'}}>
-        </div>
-        <div class = 'spacer'></div>
-      </div>}
+      {largeImages && largeImages.map(image => {
+        return (
+          <div className = {styles.secondRow}>
+            <div class = 'spacer'></div>
+            <div className = {cx(styles.imageDiv, styles.secondShot)} style = {{backgroundImage: 'url(' + image + ')'}}>
+            </div>
+            <div class = 'spacer'></div>
+          </div>
+        )
+      })}
       <div className = {styles.remainingImages}>
         <div class = 'spacer'></div>
         <div>
         <div className = {styles.auxiliaryImagesContainer}>
-          {auxiliaryImages.map(image => {
+          {smallImages.map(image => {
             return <div className = {cx(styles.imageDiv, styles.auxiliaryImage)} style = {{backgroundImage: 'url(' + image + ')', height: '400px'}}></div>
           })}
         </div>

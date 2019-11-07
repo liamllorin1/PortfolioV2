@@ -17,9 +17,7 @@ export default function FacebookFrontEndCaseStudy(props) {
     categoryText: 'UI/UX',
     titleText: 'Facebook Front End Engineering.',
     glamourShotImage: glamourShotImage,
-    backgroundText: 'At Facebook, I seek to apply everything that I\'ve learned developing React applications and designing web platforms. I plan to help build out user-facing products at the heart of Facebook\'s upcoming update overhaul: FB5, “the biggest change to the Facebook app and website we’ve made in five years,” according to Zuckerberg.',
-    challengeText: 'Come back in early January to see what I\'m working on!'
-
+    paragraphs: [{title: 'Background.', text: 'At Facebook, I seek to apply everything that I\'ve learned developing React applications and designing web platforms. I plan to help build out user-facing products at the heart of Facebook\'s upcoming update overhaul: FB5, “the biggest change to the Facebook app and website we’ve made in five years,” according to Zuckerberg.'}, {title: null, text: 'Come back in early January to see what I\'m working on!'}]
   };
 
   return(

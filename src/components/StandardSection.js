@@ -3,7 +3,6 @@ import { Link } from "gatsby"
 import { css, cx } from 'emotion'
 import "../styles/fonts.css"
 import spacing from '../styles/spacingConstants.js'
-import ImageSection from "../components/ImageSection"
 import SkillTag from "../components/SkillTag"
 import HandCoded from '../components/HandCoded'
 import ButtonBold from '../components/ButtonBold'
@@ -32,7 +31,7 @@ export default function StandardSection(props) {
           {button}
         </div>
         <div className = {styles.imageSectionContainer}>
-          <ImageSection backgroundImg = {image}/>
+          <div className = {styles.imageContainer} style = {{backgroundImage: 'url(' + image + ')'}}></div>
         </div>
         <div class = 'spacer'></div>
       </div>
@@ -52,22 +51,23 @@ const styles = {
     grid-template-columns: 60% 40%;
   `,
   sideBarContainer:css`
-    padding: 100px;
-    padding-left: 0;
-    padding-right: 50px;
+    padding-right: 100px;
+    padding-top: 150px;
     box-sizing: border-box;
   `,
   sectionTop:css`
     display: grid;
-    grid-template-columns: ${spacing.desktop.smallMargin} 350px auto ${spacing.desktop.mediumMargin};
+    grid-template-columns: ${spacing.desktop.smallMargin} 400px auto ${spacing.desktop.mediumMargin};
     position: absolute;
     top: 0;
     height: 100%;
     width: 100%;
   `,
   imageSectionContainer:css`
-  width: 90%;
-  margin: auto;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding: 150px 0;
   `,
   resumePromptText:css`
     color: rgb(200,200,200);
@@ -76,6 +76,13 @@ const styles = {
     text-decoration: none;
     color: rgb(180,180,180);
     text-decoration: underline;
-  `
+  `,
+  imageContainer:css`
+    height: calc(100% - 300px);
+    box-sizing: border-box;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+  `,
 
 }

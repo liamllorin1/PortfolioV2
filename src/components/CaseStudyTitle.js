@@ -5,7 +5,21 @@ import "../styles/fonts.css"
 import spacing from '../styles/spacingConstants.js'
 
 export default function CaseStudyTitle(props) {
-  let { light, title, overlineText } = props;
+  let { light, title, overlineText, isLeftAligned } = props;
+  let alignment = isLeftAligned ? 'left' : 'center'
+  const styles = {
+    titleContainer:css`
+      display: grid;
+      grid-template-columns: ${spacing.desktop.largeMargin} auto ${spacing.desktop.largeMargin};
+      margin-bottom: 50px;
+      text-align: ${alignment};
+    `,
+    titleOverline:css`
+      color: rgb(120,120,120);
+      margin-bottom: 25px;
+    `,
+  }
+
   return(
     <div className = {styles.titleContainer}>
       <div class = 'spacer'></div>
@@ -16,17 +30,4 @@ export default function CaseStudyTitle(props) {
       <div class = 'spacer'></div>
     </div>
   )
-}
-
-const styles = {
-  titleContainer:css`
-    display: grid;
-    grid-template-columns: ${spacing.desktop.largeMargin} auto ${spacing.desktop.largeMargin};
-    text-align: center;
-    margin-bottom: 50px;
-  `,
-  titleOverline:css`
-    color: rgb(120,120,120);
-    margin-bottom: 25px;
-  `,
 }

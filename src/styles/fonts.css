@@ -4,6 +4,7 @@ h1 {
   font-family: 'Avenir';
   font-weight: 900;
   color: rgb(10,10,10);
+  margin-top: 0;
 }
 h1.light {
   color: rgb(245,245,245);
@@ -22,8 +23,8 @@ h2.dark {
 }
 /*Use for first-level headers within sections*/
 h3 {
-  font-weight: 900;
-  font-size: 25px;
+  font-weight: 500;
+  font-size: 30px;
   font-family: 'Avenir';
   color: rgb(30,30,30);
 }
@@ -32,16 +33,24 @@ h3.light {
 }
 /*Use for second-level headers*/
 h4 {
-  font-weight: 500;
-  font-size: 20px;
+  font-weight: 700;
+  font-size: 25px;
   font-family: 'Avenir';
   color: rgb(50,50,50);
+  margin-top: 0;
+}
+h4.light {
+  color: rgb(205,205,205);
 }
 /*Use for overlines/buttons*/
 h5 {
   font-size: 15px;
   font-family: 'Avenir';
   color: rgb(125,125,125);
+  margin-top: 0;
+}
+h5.light {
+  color: rgb(180,180,180)
 }
 h6 {/*Use for captions*/
   font-size: 12px;

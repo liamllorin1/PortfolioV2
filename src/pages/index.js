@@ -12,8 +12,8 @@ import logoImage from '../images/InvertedPendulumLogo/mainLogoDark.jpg'
 import profPic from '../images/ProfPic4.jpg'
 import automataImage from '../images/leverSystem.jpg'
 import facebookImage from '../images/facebookScreenshot.png'
-import strongSuitTop from '../images/StrongSuitImage.jpg'
-import oaxacanKitchenMobile from '../images/oaxacanKitchenMobile.jpg'
+import strongSuitTop from '../images/WebsiteScreenshots/strongSuitTopFramed.jpg'
+import oaxacanKitchenMobile from '../images/OaxacanKitchen/oaxacanKitchenMobile.jpg'
 import cameras from '../images/cameras.jpg'
 import arcesium from '../images/arcesium.jpg'
 import ButtonBold from '../components/ButtonBold'
@@ -69,7 +69,7 @@ let sections = [
     rightGradient: "linear-gradient(45deg, rgb(58, 67, 84), rgb(58, 67, 84))",
     image: strongSuitTop,
     textColor: 'dark',
-    button: <Link to = {'/WIPPage/'} style = {{textDecoration: 'none'}}><ButtonBold titleColor = "rgb(240,240,240)" buttonColor = "rgb(20,20,20)" title = {"Find out more"} toPage={'/WIPPage/'}/></Link>,
+    button: <Link to = {'/StrongsuitCaseStudy/'} style = {{textDecoration: 'none'}}><ButtonBold titleColor = "rgb(240,240,240)" buttonColor = "rgb(20,20,20)" title = {"Find out more"} toPage={'/WIPPage/'}/></Link>,
     skillTags: [
       { textColor: 'rgb(20,20,20)', tagColor: 'rgb(250,250,250)', title: 'Web Dev/Design'},
       { textColor: 'rgb(20,20,20)', tagColor: 'rgb(250,250,250)', title: 'UI/UX'},
@@ -92,14 +92,14 @@ let sections = [
     ]
   },
   {
-    title: "Oaxacan Kitchen Mobile Prototypes.",
-    caption: "Under the instruction of David Kelley (founder of IDEO), my team and I performed field work, interviewing food truck vendors and customers. After honing in on a customer need, we devised two prototyped solutions and tested the solutions on-site while sampling user feedback.",
+    title: "Oaxacan Kitchen Design Research.",
+    caption: "Under the instruction of David Kelley (founder of IDEO), my team and I performed field work, interviewing food truck vendors and customers. After honing in on a POV, we prototyped two solutions and tested them on-site while sampling user feedback.",
     leftGradient: "linear-gradient(45deg, rgb(240, 240, 240), rgb(255, 255, 255))",
     rightGradient: "linear-gradient(45deg, rgb(7,108,75), rgb(25,198,165))",
     image: oaxacanKitchenMobile,
     textColor: 'dark',
     sectionId: 'designThinking',
-    button: <Link to = {'/WIPPage/'} style = {{textDecoration: 'none'}}><ButtonBold titleColor = "rgb(240,240,240)" buttonColor = "rgb(20,20,20)" title = {"Find out more"} /></Link>,
+    button: <Link to = {'/OaxacanKitchen/'} style = {{textDecoration: 'none'}}><ButtonBold titleColor = "rgb(240,240,240)" buttonColor = "rgb(20,20,20)" title = {"Find out more"} /></Link>,
     skillTags: [
       { textColor: 'rgb(20,20,20)', tagColor: 'rgb(250,250,250)', title: 'Need-Finding'},
       { textColor: 'rgb(20,20,20)', tagColor: 'rgb(250,250,250)', title: 'User Research'},
@@ -121,7 +121,7 @@ let sections = [
 //to add: <WIP/> as necessary
 const IndexPage = () => (
   <>
-    <NavBar navLinks = {[{href: '#topSection', tabTitle: 'Home'},{href: '#techSection', tabTitle: 'Interface Design'}, {href: '#MESection', tabTitle: 'Industrial Design'}, {href: '#designThinking', tabTitle: 'Design Thinking'}, {href: '#photographyArt', tabTitle: 'Photography + Art'}]}/>
+    <NavBar hideHome navLinks = {[{href: '#topSection', tabTitle: 'Home'},{href: '#techSection', tabTitle: 'Interface Design'}, {href: '#MESection', tabTitle: 'Industrial Design'}, {href: '#designThinking', tabTitle: 'Design Thinking'}, {href: '#photographyArt', tabTitle: 'Photography'}]}/>
     {sections.map((section) => {
       return <StandardSection sectionObj = {section}/>
     })}
