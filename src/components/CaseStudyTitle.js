@@ -13,6 +13,7 @@ export default function CaseStudyTitle(props) {
       grid-template-columns: ${spacing.desktop.largeMargin} auto ${spacing.desktop.largeMargin};
       margin-bottom: 50px;
       text-align: ${alignment};
+      margin-top: 50px;
     `,
     titleOverline:css`
       color: rgb(120,120,120);

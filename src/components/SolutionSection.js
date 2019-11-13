@@ -50,7 +50,7 @@ export default function SolutionSection(props) {
 
 const styles = {
   solutionSection:css`
-    padding: 150px 0;
+    padding: 200px 0;
   `,
   firstRow:css`
     display: grid;
@@ -58,7 +58,7 @@ const styles = {
     margin-bottom: 25px;
   `,
   leftBack:css`
-    padding-right: 100px;
+    padding-right: 50px;
   `,
   imageDiv:css`
     background-position: center; /* Center the image */

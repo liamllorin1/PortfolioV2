@@ -15,7 +15,7 @@ export default function DesignResearchSection(props) {
       {users && <div className = {styles.usersSection}>
         <div class = 'spacer'></div>
         <div className = {styles.userContainer}>
-          <h3>Users.</h3>
+          <h2>Users.</h2>
           {users.map(user => {
             return(
                 <User user = {user}/>
@@ -26,7 +26,7 @@ export default function DesignResearchSection(props) {
       </div>}
       {users && <div className = {styles.descriptionContainer}>
         <div class = 'spacer'></div>
-        <div>
+        <div style = {{marginBottom: '50px'}}>
           <h4>User Interview Assessment.</h4>
           {userAssessmentParagraphs.map(paragraphText => {
             return <p>{paragraphText}</p>;
@@ -46,14 +46,14 @@ export default function DesignResearchSection(props) {
       {conceptModels && <div className = {styles.conceptModelsContainer}>
         <div class = 'spacer'></div>
         <div>
-          <h3>Conceptual Models.</h3>
+          <h2>Conceptual Models.</h2>
           <ConceptModels conceptModels = {conceptModels}/>
         </div>
         <div class = 'spacer'></div>
       </div>}
       <div className = {styles.descriptionContainer}>
         <div class = 'spacer'></div>
-        <div>
+        <div style = {{marginBottom: '50px'}}>
           <h4>Initial Thought Process.</h4>
           {initialThoughtProcessParagraphs.map(paragraphText => {
             return <p>{paragraphText}</p>;
@@ -87,7 +87,8 @@ const styles = {
   usersSection:css`
     display: grid;
     grid-template-columns: ${spacing.desktop.mediumMargin} auto ${spacing.desktop.mediumMargin};
-    margin: 150px 0;
+    margin: 100px 0;
+    margin-bottom: 0px;
   `,
   howMightSection:css`
     display: grid;

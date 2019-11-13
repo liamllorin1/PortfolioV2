@@ -7,10 +7,10 @@ import CaseStudyTitle from '../components/CaseStudyTitle'
 import Breakthrough from '../components/Breakthrough'
 
 export default function IterationSection(props) {
-  let { iterations } = props.iterationObj;
+  let { iterations, isSolutions } = props.iterationObj;
   return(
     <section className = {styles.iterationSection} id = 'iterationSection'>
-        <CaseStudyTitle title='Iterations.' light={false}/>
+        <CaseStudyTitle title={isSolutions ? 'Solutions.' : 'Iterations.'} light={false}/>
       {iterations.map((iteration, index) => {
         return (
           <>
@@ -19,12 +19,12 @@ export default function IterationSection(props) {
             <div class = {styles.iterationBlock}>
               <div className = {styles.titleContainer}>
                 <h5 className = {styles.iterationOverlineText}>{iteration.overline}</h5>
-                <h3 className = {styles.iterationTitleText}>{iteration.title}</h3>
+                <h2 className = {styles.iterationTitleText}>{iteration.title}</h2>
               </div>
               <div className = {styles.descriptionContainer}>
                 <div className = {styles.iterationImage} style = {{backgroundImage: 'url(' + iteration.image + ')'}}></div>
                 <div className = {styles.paragraphContainer}>
-                  <h4>Iteration Results.</h4>
+                  <h4>{isSolutions ? 'Solution Description.': 'Iteration Results.'}</h4>
                   <p>{iteration.description}</p>
                 </div>
               </div>
@@ -43,12 +43,13 @@ const styles = {
   iterationSection:css`
     width: 100%;
     padding: 150px 0;
+    padding-bottom: 50px;
     background-color: rgb(240,240,240);
   `,
   iterationContainer:css`
     display: grid;
     grid-template-columns: ${spacing.desktop.largeMargin} auto ${spacing.desktop.largeMargin};
-    margin-bottom: 200px;
+    margin: 150px 0;
   `,
   iterationOverlineText:css`
     margin-bottom: 0;

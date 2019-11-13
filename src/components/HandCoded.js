@@ -8,7 +8,7 @@ export default function HandCoded() {
 
   return (
   <div className = {styles.container}>
-    <h6 className = {styles.text}>Hand-coded by Liam Llorin.</h6>
+    <h6 className = {styles.text}>Developed / Designed by Liam Llorin.</h6>
   </div>)
 }
 

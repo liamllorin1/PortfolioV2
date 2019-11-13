@@ -9,7 +9,7 @@ import StandardSection from "../components/StandardSection"
 import SEO from "../components/seo"
 import TechSection from "../components/TechSection"
 import logoImage from '../images/InvertedPendulumLogo/mainLogoDark.jpg'
-import profPic from '../images/ProfPic4.jpg'
+import profPic from '../images/ProfPic5.jpg'
 import automataImage from '../images/leverSystem.jpg'
 import facebookImage from '../images/facebookScreenshot.png'
 import strongSuitTop from '../images/WebsiteScreenshots/strongSuitTopFramed.jpg'
@@ -121,7 +121,7 @@ let sections = [
 //to add: <WIP/> as necessary
 const IndexPage = () => (
   <>
-    <NavBar hideHome navLinks = {[{href: '#topSection', tabTitle: 'Home'},{href: '#techSection', tabTitle: 'Interface Design'}, {href: '#MESection', tabTitle: 'Industrial Design'}, {href: '#designThinking', tabTitle: 'Design Thinking'}, {href: '#photographyArt', tabTitle: 'Photography'}]}/>
+    <NavBar hideHome navLinks = {[{href: '#topSection', tabTitle: 'Home'},{href: '#techSection', tabTitle: 'Interface Design'}, {href: '#MESection', tabTitle: 'Industrial Design'}, {href: '#designThinking', tabTitle: 'Design Research'}, {href: '#photographyArt', tabTitle: 'Photography'}]}/>
     {sections.map((section) => {
       return <StandardSection sectionObj = {section}/>
     })}

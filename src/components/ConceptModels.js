@@ -25,8 +25,8 @@ const styles = {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 20px;
-    margin-top: 25px;
-    margin-bottom: 50px;
+    margin-top: 50px;
+    margin-bottom: 100px;
   `,
   imageContainer:css`
     height: 250px;

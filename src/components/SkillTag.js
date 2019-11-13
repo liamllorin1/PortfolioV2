@@ -12,7 +12,7 @@ export default function SkillTag(props) {
       padding: 0 10px;
       margin: 25px 0;
       margin-top: 0;
-      box-shadow: 0px 0px 3px rgb(10,10,10, .025);
+      box-shadow: 0px 0px 3px rgb(10,10,10, .09);
       margin-right: 10px;
     `,
     title:css`

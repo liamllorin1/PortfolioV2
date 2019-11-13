@@ -6,7 +6,7 @@ import spacing from '../styles/spacingConstants.js'
 import CaseStudyTitle from '../components/CaseStudyTitle'
 
 export default function FrameSection(props) {
-  let { categoryText, titleText, paragraphs, glamourShotImage} = props.frameObj;
+  let { categoryText, titleText, paragraphs, glamourShotImage, teammates } = props.frameObj;
   return(
     <section className = {styles.frameSection} id = 'frameSection'>
       <CaseStudyTitle title = {titleText} overlineText = {categoryText}/>
@@ -25,6 +25,12 @@ export default function FrameSection(props) {
               <p className = {styles.paragraphText}>{paragraph.text}</p>
             </div>)
           })}
+          {teammates && <div className = {styles.paragraphContainer}>
+              <h4>Teammates.</h4>
+              {teammates.map(teammate => {
+                return <p>{teammate}</p>;
+              })}
+          </div>}
         </div>
         <div class = 'spacer'></div>
       </div>

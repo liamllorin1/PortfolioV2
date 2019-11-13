@@ -86,7 +86,6 @@ const styles = {
   `,
   homeText:css`
     color: rgb(250,250,250);
-    font-weight: 800;
   `,
   navTabText:css`
   line-height: 50px;

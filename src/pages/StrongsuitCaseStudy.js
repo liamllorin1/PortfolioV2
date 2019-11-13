@@ -28,7 +28,7 @@ export default function StrongsuitCaseStudy(props) {
     glamourShotImage: strongSuitTop,
     largeImages: [nahumTop, ryanTop, farmhouseTop],
     smallImages: [],
-    title: 'Inverted Pendulum Logo.',
+    title: 'STRONGSUIT Portfolio Shots.',
     caption: 'Several screenshots from the landing pages that I developed.'
   };
 
