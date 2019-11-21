@@ -2,6 +2,9 @@ import React from "react"
 import { Link } from "gatsby"
 import { css, cx } from 'emotion'
 import "../styles/fonts.css"
+import "../styles/phoneSpacing.css"
+import "../styles/tabletSpacing.css"
+import "../styles/desktopSpacing.css"
 import spacing from '../styles/spacingConstants.js'
 import CaseStudyTitle from '../components/CaseStudyTitle'
 
@@ -10,15 +13,15 @@ export default function FrameSection(props) {
   return(
     <section className = {styles.frameSection} id = 'frameSection'>
       <CaseStudyTitle title = {titleText} overlineText = {categoryText}/>
-      <div className = {styles.glamourShotContainer}>
-        <div class = 'spacer'></div>
-        <div className = {styles.glamourShotImage} style = {{backgroundImage: 'url(' + glamourShotImage + ')'}}>
+      <div className = {cx(styles.glamourShotContainer, 'row')}>
+        <div class = 'col-2 col-m-1'></div>
+        <div className = {cx('col-8', 'col-m-10', styles.glamourShotImage)} style = {{backgroundImage: 'url(' + glamourShotImage + ')'}}>
         </div>
-        <div class = 'spacer'></div>
+        <div class = 'col-2 col-m-1'></div>
       </div>
-      <div className = {styles.backgroundSection}>
-        <div class = 'spacer'></div>
-        <div className = {styles.backgroundContainer}>
+      <div className = {cx(styles.backgroundSection, 'row')}>
+        <div class = 'col-4 col-m-3'></div>
+        <div className = {cx('col-4', 'col-m-6', styles.backgroundContainer)}>
           {paragraphs.map(paragraph => {
             return (<div className = {styles.paragraphContainer}>
               {paragraph.title && <h4>{paragraph.title}</h4>}
@@ -32,7 +35,7 @@ export default function FrameSection(props) {
               })}
           </div>}
         </div>
-        <div class = 'spacer'></div>
+        <div class = 'col-4 col-m-3'></div>
       </div>
     </section>
   )
@@ -46,19 +49,14 @@ const styles = {
   `,
   glamourShotContainer:css`
     margin-bottom: 50px;
-    display: grid;
-    grid-template-columns: ${spacing.desktop.mediumMargin} auto ${spacing.desktop.mediumMargin};
   `,
   glamourShotImage:css`
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover; /* Resize the background image to cover the entire container */
-    width: 100%;
     height: 600px;
   `,
   backgroundSection:css`
-    display: grid;
-    grid-template-columns: ${spacing.desktop.largeMargin} auto ${spacing.desktop.largeMargin};
     padding: 50px 0;
   `,
   paragraphText:css`

@@ -29,12 +29,12 @@ let sections = [
     sectionId: "topSection",
     image: profPic,
     textColor: 'light',
-    button: <Link to = {'/WIPPage/'} style = {{textDecoration: 'none'}}><ButtonBold buttonColor = "rgb(240,240,240)" titleColor = "rgb(20,20,20)" title = {"Find out more"}/></Link>,
+    button: <Link to = {'/About/'} style = {{textDecoration: 'none'}}><ButtonBold buttonColor = "rgb(240,240,240)" titleColor = "rgb(20,20,20)" title = {"Find out more"}/></Link>,
     resume: true
   },
   {
     title: "Facebook Front End Engineering.",
-    caption: "This Winter I'll be working alongside Product Designers to develop the next generation of web platform features/updates as part of Facebook's prestige Front End intern program. Whatever product I work on, I'll be building front-end systems while incorporating Facebook frameworks/components, engaging in design reviews, and much more.",
+    caption: "This Winter I'll be working w/ Product Designers to develop the next generation of web platform features as part of Facebook's prestige Front End intern program. I'll build front-end systems while incorporating Facebook frameworks, engaging in design reviews, etc.",
     leftGradient: "linear-gradient(45deg, rgb(247, 247, 247), rgb(255, 255, 255))",
     rightGradient: "linear-gradient(45deg, rgb(0, 191, 255), rgb(0, 191, 255))",
     image: facebookImage,
@@ -55,7 +55,7 @@ let sections = [
     image: arcesium,
     textColor: 'dark',
     sectionId: "techSection",
-    button: <Link to = {'/WIPPage/'} style = {{textDecoration: 'none'}}><ButtonBold titleColor = "rgb(240,240,240)" buttonColor = "rgb(20,20,20)" title = {"Find out more"} toPage={'/WIPPage/'}/></Link>,
+    button: <Link to = {'/PasswordPage/'} style = {{textDecoration: 'none'}}><ButtonBold titleColor = "rgb(240,240,240)" buttonColor = "rgb(20,20,20)" title = {"Find out more"} toPage={'/WIPPage/'}/></Link>,
     skillTags: [
       { textColor: 'rgb(20,20,20)', tagColor: 'rgb(250,250,250)', title: 'Web Dev/Design'},
       { textColor: 'rgb(20,20,20)', tagColor: 'rgb(250,250,250)', title: 'UI/UX'},
@@ -78,7 +78,7 @@ let sections = [
   },
   {
     title: "Inverted Pendulum Logo.",
-    caption: "In Autumn 2019, I designed 3 prototypes via concept sketches and then iterating throughout before developing the final inverted pendulum logo. Within this process, I utilized the lazer cutter, band saws, drill press, sanding machines, and foam wire cutter to develop the final product.",
+    caption: "In Autumn 2019, I designed 2 prototypes via concept sketches before developing the final inverted pendulum logo. Throughout my iterations, I utilized the lazer cutter, band saws, drill press, sanding machines, and foam wire cutter.",
     leftGradient: "linear-gradient(45deg, rgb(240, 240, 240), rgb(255, 255, 255))",
     rightGradient: "linear-gradient(45deg, rgb(250, 250, 250), rgb(200, 200, 200))",
     sectionId: "MESection",
@@ -93,7 +93,7 @@ let sections = [
   },
   {
     title: "Oaxacan Kitchen Design Research.",
-    caption: "Under the instruction of David Kelley (founder of IDEO), my team and I performed field work, interviewing food truck vendors and customers. After honing in on a POV, we prototyped two solutions and tested them on-site while sampling user feedback.",
+    caption: "Under the instruction of David Kelley (founder of IDEO), my team and I performed field work, interviewing food truck vendors/customers. After honing in on a POV, we prototyped two solutions and tested them on-site.",
     leftGradient: "linear-gradient(45deg, rgb(240, 240, 240), rgb(255, 255, 255))",
     rightGradient: "linear-gradient(45deg, rgb(7,108,75), rgb(25,198,165))",
     image: oaxacanKitchenMobile,
@@ -101,8 +101,7 @@ let sections = [
     sectionId: 'designThinking',
     button: <Link to = {'/OaxacanKitchen/'} style = {{textDecoration: 'none'}}><ButtonBold titleColor = "rgb(240,240,240)" buttonColor = "rgb(20,20,20)" title = {"Find out more"} /></Link>,
     skillTags: [
-      { textColor: 'rgb(20,20,20)', tagColor: 'rgb(250,250,250)', title: 'Need-Finding'},
-      { textColor: 'rgb(20,20,20)', tagColor: 'rgb(250,250,250)', title: 'User Research'},
+      { textColor: 'rgb(20,20,20)', tagColor: 'rgb(250,250,250)', title: 'Design Research'},
       { textColor: 'rgb(20,20,20)', tagColor: 'rgb(250,250,250)', title: 'Prototyping'},
     ]
   },

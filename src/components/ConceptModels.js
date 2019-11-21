@@ -8,9 +8,10 @@ export default function ConceptModels(props) {
   return(
     <div className = {styles.conceptModelsContainer}>
       {conceptModels.map((conceptModel) => {
+        let position = conceptModel.position ? conceptModel.position : 'center';
         return (
           <div>
-            <div className = {styles.imageContainer} style = {{backgroundImage: 'url(' + conceptModel.image + ')'}}>
+            <div className = {styles.imageContainer} style = {{backgroundImage: 'url(' + conceptModel.image + ')', backgroundPosition: position}}>
             </div>
             <h6 className = {styles.conceptCaptionText}>{conceptModel.caption} <i style = {{color: 'rgb(150,150,150)'}}class="fas fa-level-up-alt"></i></h6>
           </div>
@@ -30,7 +31,6 @@ const styles = {
   `,
   imageContainer:css`
     height: 250px;
-    background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover; /* Resize the background image to cover the entire container */
   `,

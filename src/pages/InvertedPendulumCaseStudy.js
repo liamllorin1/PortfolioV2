@@ -46,7 +46,7 @@ export default function InvertedPendulumCaseStudy(props) {
     iterations: [
       {image: iteration1, title: 'Purple Foam Core Prototype.', overline: 'Concept Testing', description: 'My main goal of this prototype was to validate the very idea that I could make an inverted pendulum design. After cutting out the half-crescent purple foam core shape, a nut and exacto knice was all I needed to enforce the inverted pendulum effect.'},
       {image: iteration2, title: 'Wood Prototype.', overline: 'Product Prototype', description: 'The wooden prototype was my test to iterate towards the materials that I would be using for the final product. After finishing the wooden frame and letters, I realized that I would need a more elegant approach to offset the wooden material.'},
-      {image: iteration3, title: 'Weight Imbalance Prototype.', overline: 'Feature Prototype', description: 'When I began to build out my final product, I knew that I needed to create negative space in the top-half of the crescent to exaggerate the weight imbalance. Drilling 3/4 through the material, I had both holes for metal inserts as well as negative space!', breakThrough: true}
+      {image: iteration3, title: 'Weight Imbalance Prototype.', overline: 'Feature Prototype', description: 'When I began to build out my final product, I knew that I needed to create negative space in the top-half of the crescent to exaggerate the weight imbalance. Drilling 3/4 through the material, I had both holes for metal inserts as well as negative space!'}
     ]
   };
   let solutionObj = {

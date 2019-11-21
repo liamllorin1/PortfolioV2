@@ -13,7 +13,7 @@ export default function ButtonBold(props) {
     background-color: ${buttonColor};
     text-align: center;
     width: max-content;
-    margin-bottom: 25px;
+    margin-top: 0;
     `,
     buttonText:css`
     color: ${titleColor};

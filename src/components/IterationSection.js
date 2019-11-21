@@ -7,16 +7,16 @@ import CaseStudyTitle from '../components/CaseStudyTitle'
 import Breakthrough from '../components/Breakthrough'
 
 export default function IterationSection(props) {
-  let { iterations, isSolutions } = props.iterationObj;
+  let { iterations, isSolutions, isWireframes } = props.iterationObj;
   return(
     <section className = {styles.iterationSection} id = 'iterationSection'>
-        <CaseStudyTitle title={isSolutions ? 'Solutions.' : 'Iterations.'} light={false}/>
+        <CaseStudyTitle title={isSolutions ? 'Solutions.' : isWireframes ? 'Wireframes' : 'Iterations.'} light={false}/>
       {iterations.map((iteration, index) => {
         return (
           <>
-          <div className = {styles.iterationContainer}>
-            <div class = 'spacer'></div>
-            <div class = {styles.iterationBlock}>
+          <div className = {cx('row',styles.iterationContainer)}>
+            <div class = 'col-4 col-m-3'></div>
+            <div className = {cx('col-4', 'col-m-6', styles.iterationBlock)}>
               <div className = {styles.titleContainer}>
                 <h5 className = {styles.iterationOverlineText}>{iteration.overline}</h5>
                 <h2 className = {styles.iterationTitleText}>{iteration.title}</h2>
@@ -29,7 +29,7 @@ export default function IterationSection(props) {
                 </div>
               </div>
             </div>
-            <div class = 'spacer'></div>
+            <div class = 'col-4 col-m-3'></div>
           </div>
           {iteration.breakThrough && <Breakthrough/>}
           </>
@@ -47,8 +47,6 @@ const styles = {
     background-color: rgb(240,240,240);
   `,
   iterationContainer:css`
-    display: grid;
-    grid-template-columns: ${spacing.desktop.largeMargin} auto ${spacing.desktop.largeMargin};
     margin: 150px 0;
   `,
   iterationOverlineText:css`
@@ -73,7 +71,7 @@ const styles = {
     margin-bottom: 50px;
   `,
   paragraphContainer:css`
-    padding-right: 100px;
-    padding-left: 50px;
+    padding-right: 25px;
+    padding-left: 25px;
   `
 }

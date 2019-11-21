@@ -1,0 +1,13 @@
+[class*="col-"] {
+  /*borders for box is here*/
+  float: left;
+  width: 100%;
+  border: 1px solid rgba(255, 0, 0, 0);
+  box-sizing: border-box;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}

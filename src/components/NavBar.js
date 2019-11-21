@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import { css, cx } from 'emotion'
 import $ from 'jquery';
 import Image from "../components/image"
+import ButtonBold from '../components/ButtonBold'
 import SEO from "../components/seo"
 
 let lastId;
@@ -44,11 +45,16 @@ export default function NavBar(props) {//THIS ENTIRE BLOCK IS RE-RENDERED ON SET
 
   return (
     <div className = {styles.navBarContainer}>
-      {!hideHome && (
+      {!hideHome && navLinks.length !== 0 && (
         <Link to = {'/'} style = {{textDecoration: 'none'}}>
           <div className = {cx(styles.navTab, styles.homeTab)}>
             <h6 className = {cx(styles.navTabText, styles.homeText)}>Home Page</h6>
           </div>
+        </Link>
+      )}
+      {!hideHome && navLinks.length === 0 && (
+        <Link to = {'/'} style = {{textDecoration: 'none '}}>
+          <ButtonBold titleColor = "rgb(240,240,240)" buttonColor = "rgb(20,20,20)" title = {"Home"}/>
         </Link>
       )}
     <nav>

@@ -2,7 +2,9 @@ import React from "react"
 import { Link } from "gatsby"
 import { css, cx } from 'emotion'
 import "../styles/fonts.css"
-import spacing from '../styles/spacingConstants.js'
+import "../styles/phoneSpacing.css"
+import "../styles/tabletSpacing.css"
+import "../styles/desktopSpacing.css"
 import SkillTag from "../components/SkillTag"
 import HandCoded from '../components/HandCoded'
 import ButtonBold from '../components/ButtonBold'
@@ -13,15 +15,15 @@ export default function StandardSection(props) {
   return(
     <section className={styles.sectionContainer} id={sectionId ? sectionId : ""}>
       {title === "Liam Llorin." && <HandCoded/>}
-      <div className = {styles.sectionBackground}>
+      <div className = {cx(styles.sectionBackground)}>
         <div className = {styles.leftBack} style = {{backgroundImage: leftGradient}}>
         </div>
         <div className = {styles.rightBack} style = {{backgroundImage: rightGradient}}>
         </div>
       </div>
-      <div className = {styles.sectionTop}>
-        <div class = "spacer"></div>
-        <div className={styles.sideBarContainer}>
+      <div className = {cx(styles.sectionTop, 'row')}>
+        <div class = "col-2 col-m-1"></div>
+        <div className={cx('col-3 col-m-5', styles.sideBarContainer)}>
           {title === "Liam Llorin." ? <h1 class = {textColor} style = {{marginTop: 0}}>{title}</h1> : <h2 class = {textColor} style = {{marginTop: 0}}>{title}</h2>}
           <p class = {textColor}>{caption}</p>
           {skillTags && skillTags.map(skillTag => {
@@ -30,10 +32,10 @@ export default function StandardSection(props) {
           {resume && <h5 className = {styles.resumePromptText}>Want to see my <a href = {resumeFile} className = {styles.resumePromptLink}>Resume</a>?</h5>}
           {button}
         </div>
-        <div className = {styles.imageSectionContainer}>
+        <div className = {cx(styles.imageSectionContainer, 'col-5 col-m-5')}>
           <div className = {styles.imageContainer} style = {{backgroundImage: 'url(' + image + ')'}}></div>
         </div>
-        <div class = 'spacer'></div>
+        <div class = 'col-2 col-m-1'></div>
       </div>
     </section>)
 }
@@ -51,20 +53,17 @@ const styles = {
     grid-template-columns: 60% 40%;
   `,
   sideBarContainer:css`
-    padding-right: 100px;
+    padding-right: 50px;
     padding-top: 150px;
     box-sizing: border-box;
   `,
   sectionTop:css`
-    display: grid;
-    grid-template-columns: ${spacing.desktop.smallMargin} 400px auto ${spacing.desktop.mediumMargin};
     position: absolute;
     top: 0;
     height: 100%;
     width: 100%;
   `,
   imageSectionContainer:css`
-    width: 100%;
     height: 100%;
     position: relative;
     padding: 150px 0;
@@ -78,7 +77,7 @@ const styles = {
     text-decoration: underline;
   `,
   imageContainer:css`
-    height: calc(100% - 300px);
+    height: calc(100vh - 300px);
     box-sizing: border-box;
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */

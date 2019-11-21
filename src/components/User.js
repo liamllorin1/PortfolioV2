@@ -55,6 +55,6 @@ const styles = {
     `,
     userDescriptionContainer:css`
       padding-left: 50px;
-      padding-right: 100px;
+      padding-right: 50px;
     `
 }
