@@ -24,7 +24,7 @@ export default function FacebookFrontEndCaseStudy(props) {
     <>
       <NavBar navLinks = {[{href: '#frameSection', tabTitle: 'Introduction'}]}/>
       <FrameSection frameObj = {frameObj}/>
-      <CaseStudyFooter/>
+      <CaseStudyFooter gradient = {"linear-gradient(45deg, rgb(0, 191, 255), rgb(0, 191, 255))"}/>
     </>
   )
 }

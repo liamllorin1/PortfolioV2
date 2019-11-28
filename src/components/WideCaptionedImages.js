@@ -2,14 +2,25 @@ import React from "react"
 import { Link } from "gatsby"
 import { css, cx } from 'emotion'
 import "../styles/fonts.css"
+import "../styles/phoneSpacing.css"
+import "../styles/tabletSpacing.css"
+import "../styles/desktopSpacing.css"
 
 export default function WideCaptionedImages(props) {
   let {captionedImages} = props;
+  let leftPadding = {paddingLeft: '0px', paddingRight: '10px'};
+  let rightPadding = {paddingLeft: '10px', paddingRight: '0px'};
   return(
-    <div className = {styles.conceptSketchesContainer}>
-      {captionedImages.map((captionedImage) => {
+    <div className = {cx('row', styles.conceptSketchesContainer)}>
+      {captionedImages.map((captionedImage, index) => {
+        let paddingStyle;
+        if (index % 2 === 0) {
+          paddingStyle = leftPadding;
+        } else if (index % 2 === 1) {
+          paddingStyle = rightPadding;
+        }
         return (
-          <div>
+          <div class = 'col-6 col-m-6' style = {paddingStyle}>
             <div className = {styles.imageContainer} style = {{backgroundImage: 'url(' + captionedImage.image + ')'}}>
             </div>
             <h6 className = {cx(styles.conceptSketchText, 'light')}>{captionedImage.caption} <i style = {{color: 'rgb(150,150,150)'}}class="fas fa-level-up-alt"></i></h6>
@@ -22,8 +33,6 @@ export default function WideCaptionedImages(props) {
 
 const styles = {
   conceptSketchesContainer:css`
-    display: grid;
-    grid-template-columns: 1fr 1fr;
     column-gap: 20px;
     margin-top: 25px;
     margin-bottom: 50px;

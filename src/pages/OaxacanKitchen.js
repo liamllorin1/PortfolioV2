@@ -13,8 +13,9 @@ import foodTruckSeating from '../images/OaxacanKitchen/foodTruckSeating.jpg'
 import yikYak from '../images/OaxacanKitchen/yikYak.jpeg'
 import ron from '../images/OaxacanKitchen/ron.png'
 import noel from '../images/OaxacanKitchen/noel.png'
-import conceptSketch1 from '../images/conceptSketch2.jpg'
-import conceptSketch2 from '../images/conceptSketch1.jpg'
+import comingSoon from '../images/comingSoon.png'
+import givingVendorSay from '../images/OaxacanKitchen/givingVendorSay.jpg'
+import messageBoard from '../images/OaxacanKitchen/messageBoard.jpg'
 import FrameSection from '../components/FrameSection'
 import DesignResearchSection from '../components/DesignResearchSection'
 import ConceptualizationSection from '../components/ConceptualizationSection'
@@ -41,9 +42,9 @@ export default function OaxacanKitchen(props) {
   };
 
   let conceptualizationObj = {
-    abstractBrainstorms: [{image: conceptSketch1, caption: '"What does community mean?" mind map'}, {image: conceptSketch2, caption: '"Creating community at a food truck" mind map"'}],
+    abstractBrainstorms: [{image: comingSoon, caption: '"What does community mean?" mind map'}, {image: comingSoon, caption: '"Creating community at a food truck" mind map"'}],
     brainstormReflectionParagraphs: ['Our initial brainstorm poked at the idea of "what does community mean". As you can see, we tossed around ideas from "family" to "organization" to the concept, "shared similarities". In doing so, we collectively realized that community is, in its simplest form, is manifested via interaction, and deepened through sharing stories (as you can see on the fringes of the mind map).', 'Afterwards, we wanted to talk about, well, how can we create this version of community at a food truck? We included, of course, our conceptual models, but we went deeper. My team and I thought about this sense of "shared stories" between the customers themselves, and then we asked, what about the food vendor themself? After all, Ron had such an interesting story to share to his customers, maybe there is something there. We recalled how Noel himself had gotten comfortable with the vendors at his father\'s construction sites! At the end of this mind map, we saw immense potential in the message board of Five Guys as well as the idea of sharing the vendor\'s story with the customers!'],
-    conceptSketches: [{image: conceptSketch1, caption: 'Beginning sketches'}, {image: conceptSketch2, caption: 'Focus on inverted pendulum design!'}],
+    conceptSketches: [{image: messageBoard, caption: 'Community conversation ideas'}, {image: givingVendorSay, caption: 'Providing the food vendor a voice'}],
     conceptReflectionParagraphs: ['As you can see on the left image, I really wanted to focus on this concept of a "message board" shared between the customers. Would the board be an ipad screen? Would it instead be a physical bulletin board? To me, the latter was much more organic. If we were to create community at a food truck, why would we force customers to engage with a screen rather than eachother?', 'My team and I still wanted to mull over the possibility of opening up the conversation to the vendor. What would this look like? A special message on the bulletin board reserved to them? Then I thought about the "business card" idea. Why not hand this out, a "message" from the vendor to eat customer that ordered from his truck? It could, for Ron in particular, share his story about visiting Oaxaca, or his commitment to sustainability and how his business aligns with that mission.']
   };
 

@@ -9,6 +9,16 @@ import spacing from '../styles/spacingConstants.js'
 import ButtonBold from '../components/ButtonBold'
 
 export default function CaseStudyFooter(props) {
+  let { gradient } = props;
+
+
+  const styles = {
+    footerSection:css`
+      background-image: linear-gradient(80deg, rgb(15, 15, 15), rgb(50, 50, 50));
+      padding: 150px 0;
+    `,
+  }
+
   return(
     <div className = {cx('row', styles.footerSection)}>
       <div class = 'col-2 col-m-1'></div>
@@ -24,11 +34,4 @@ export default function CaseStudyFooter(props) {
       <div class = 'col-2 col-m-1'></div>
     </div>
   )
-}
-
-const styles = {
-  footerSection:css`
-    background-image: linear-gradient(80deg, rgb(15, 15, 15), rgb(50, 50, 50));
-    padding: 150px 0;
-  `,
 }

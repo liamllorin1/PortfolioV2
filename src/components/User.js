@@ -2,13 +2,16 @@ import React from "react"
 import { Link } from "gatsby"
 import { css, cx } from 'emotion'
 import "../styles/fonts.css"
+import "../styles/phoneSpacing.css"
+import "../styles/tabletSpacing.css"
+import "../styles/desktopSpacing.css"
 import spacing from '../styles/spacingConstants.js'
 
 export default function User(props) {
   let { image, caption, role, name } = props.user;
   return(
-    <div className = {styles.userContainer}>
-      <div className = {styles.userImage} style = {{backgroundImage: 'url(' + image + ')'}}>
+    <div className = {cx(styles.userContainer, 'row')}>
+      <div className = {cx('col-6', 'col-m-6', styles.userImage)} style = {{backgroundImage: 'url(' + image + ')'}}>
         <div className = {styles.userTop}>
           <div className = {styles.userTextParent}>
             <h5 style = {{marginBottom: '15px'}} class = 'light'>{role}</h5>
@@ -16,7 +19,7 @@ export default function User(props) {
           </div>
         </div>
       </div>
-      <div className = {styles.userDescriptionContainer}>
+      <div className = {cx('col-6', 'col-m-6', styles.userDescriptionContainer)}>
         <h4 style = {{marginTop: 0}}>Profile.</h4>
         <p className = {styles.userDescriptionText}>{caption}
         </p>
@@ -27,18 +30,17 @@ export default function User(props) {
 
 const styles = {
     userContainer:css`
-      display: grid;
-      grid-template-columns: 3fr 3fr;
-      margin: 150px 0;
+      margin: 100px 0;
       margin-top: 50px;
+      position: relative;
     `,
     userImage:css`
       background-position: center; /* Center the image */
       background-repeat: no-repeat; /* Do not repeat the image */
       background-size: cover; /* Resize the background image to cover the entire container */
-      width: 100%;
       height: 350px;
       position: relative;
+      margin-bottom: 50px;
     `,
     userTop:css`
       height: 100%;

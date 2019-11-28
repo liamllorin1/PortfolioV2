@@ -15,13 +15,14 @@ import martinLutherKingStatue from '../images/InvertedPendulumLogo/martinLutherK
 import conceptModel2 from '../images/conceptModel2.jpeg'
 import conceptModel3 from '../images/conceptModel3.jpeg'
 import conceptModel4 from '../images/conceptModel4.jpeg'
-import conceptSketch1 from '../images/conceptSketch2.jpg'
-import conceptSketch2 from '../images/conceptSketch1.jpg'
+import comingSoon from '../images/comingSoon.png'
 import iteration1 from '../images/InvertedPendulumLogo/iteration1.jpg'
 import iteration2 from '../images/InvertedPendulumLogo/iteration2.jpg'
 import iteration3 from '../images/InvertedPendulumLogo/iteration3.jpg'
 import mainLogoLight from '../images/InvertedPendulumLogo/mainLogoLight.jpg'
 import logoHandHeld from '../images/InvertedPendulumLogo/logoHandHeld.jpg'
+import invertedPendulumIdea from '../images/InvertedPendulumLogo/invertedPendulumIdea.jpg'
+import lSketches from '../images/InvertedPendulumLogo/lSketches.jpg'
 import NavBar from '../components/NavBar'
 
 
@@ -39,7 +40,7 @@ export default function InvertedPendulumCaseStudy(props) {
       initialThoughtProcessParagraphs: ['I had a lot of ideas floating in my head. "How might I create this sense of motion and aspect of interactivity with two L\'s?", I asked myself. I drew inspiration from the Martin Luther King statue, wherein, despite its obviously static form, it reflected Dr. King almost emerging out into the open.','I also appreciated the simplicity found in other logos that tackled the repeating letter challenge. I myself needed to find a way to combine two letters, L\'s specifically, in a creative way. I knew I wanted a heavily weight font-size, and I appreciated the idea of the letters being slightly cut off while still being legible.']
   };
   let conceptualizationObj = {
-    conceptSketches: [{image: conceptSketch1, caption: 'Beginning sketches'}, {image: conceptSketch2, caption: 'Focus on inverted pendulum design!'}],
+    conceptSketches: [{image: lSketches, caption: 'Beginning sketches'}, {image: invertedPendulumIdea, caption: 'Focus on inverted pendulum design!'}],
     conceptReflectionParagraphs: ['After sketching out bland designs, I was frustrated with hitting roadblocks. My two dimensional logos did not have the life that I needed for my logo to be a physical, interactive "product". But as you can see by the sketches, I hit a breakthrough when I realized that an inverted pendulum would breathe life into otherwise stationary letters. At the same time, the L\'s were able to "emerge" from the inverted pendulum\'s tilted rectangular face, and my objective to create a sense of motion was fulfilled!']
   };
   let iterationObj = {

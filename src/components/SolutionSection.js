@@ -12,6 +12,8 @@ import ButtonBold from '../components/ButtonBold'
 
 export default function SolutionSection(props) {
   let { glamourShotImage, largeImages, smallImages, title, caption, isPhotography } = props.solutionObj;
+  let leftPadding = css`padding-left: 0px; padding-right: 10px`;
+  let rightPadding = css`padding-left: 10px; padding-right: 0px`;
   return(
     <section className = {styles.solutionSection} id = "solutionSection" style = { {backgroundColor: 'rgb(250,250,250)'}}>
       <div className = {cx('row', styles.firstRow)}>
@@ -39,9 +41,18 @@ export default function SolutionSection(props) {
       <div class = 'row'>
         <div class = 'col-2 col-m-1'></div>
         <div>
-        <div className = {cx('col-8', 'col-m-10', styles.auxiliaryImagesContainer)}>
-          {smallImages.map(image => {
-            return <div className = {cx(styles.imageDiv, styles.auxiliaryImage)} style = {{backgroundImage: 'url(' + image + ')', height: '400px'}}></div>
+        <div className = {cx('col-8', 'col-m-10')}>
+          {smallImages.map((image, index) => {
+            let paddingStyle;
+            if (index % 2 === 0) {
+              paddingStyle = leftPadding;
+            } else if (index % 2 === 1) {
+              paddingStyle = rightPadding;
+            }
+            return <div className = {cx('col-6', 'col-m-6', styles.auxiliaryImage, paddingStyle)}>
+              <div style = {{backgroundImage: 'url(' + image + ')', height: '400px'}} className = {styles.imageDiv}></div>
+
+            </div>
           })}
         </div>
         </div>
@@ -75,10 +86,7 @@ const styles = {
   secondShot:css`
     height: 550px;
   `,
-  auxiliaryImagesContainer:css`
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 25px;
-    row-gap: 25px;
+  auxiliaryImage:css`
+    padding-bottom: 25px;
   `
 }

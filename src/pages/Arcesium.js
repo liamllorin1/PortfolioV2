@@ -1,17 +1,27 @@
 import React from "react"
 import { Link } from "gatsby"
 import { css, cx } from 'emotion'
+import comingSoon from '../images/comingSoon.png'
 import spacing from '../styles/spacingConstants.js'
 import darkMediumDarkBack from '../images/Arcesium/darkMediumDarkBack.jpg'
 import lightWide from '../images/Arcesium/lightWide.jpg'
 import lightMedium from '../images/Arcesium/lightMedium.jpg'
 import lightSmall from '../images/Arcesium/lightSmall.png'
 import darkMedium from '../images/Arcesium/darkMedium.jpg'
+import lightCallout from '../images/Arcesium/lightCallout.png'
+import darkCallout from '../images/Arcesium/darkCallout.png'
 import fusionChart from '../images/Arcesium/fusionChart.png'
 import excelSheet from '../images/Arcesium/excelSheet.jpg'
 import googleDrive from '../images/Arcesium/googleDrive.png'
-import conceptSketch1 from '../images/conceptSketch2.jpg'
 import jPMManager from '../images/Arcesium/JPMManager.jpg'
+import reconLight from '../images/Arcesium/reconLight.jpg'
+import reconDark from '../images/Arcesium/reconDark.jpg'
+import layout2 from '../images/Arcesium/layout2.jpg'
+import layout1 from '../images/Arcesium/layout1.jpg'
+import cardsSketches from '../images/Arcesium/cardsSketches.jpg'
+import statusCalloutSketches from '../images/Arcesium/statusCalloutSketches.jpg'
+import narrowViewport from '../images/Arcesium/narrowViewPortScreelyPS.jpg'
+import wideViewport from '../images/Arcesium/wideViewPortScreelyPS.jpg'
 import FrameSection from '../components/FrameSection'
 import DesignResearchSection from '../components/DesignResearchSection'
 import ConceptualizationSection from '../components/ConceptualizationSection'
@@ -42,22 +52,22 @@ export default function Arcesium(props) {
   };
 
   let conceptualizationObj = {
-    conceptSketches: [{image: conceptSketch1, caption: '"Card" concept'}, {image: conceptSketch1, caption: 'Horizontal clicking layout'}, {image: conceptSketch1, caption: 'Vertical scrolling w/ fixed bar'}, {image: conceptSketch1, caption: 'Status callout feature'}],
-    conceptReflectionParagraphs: ['Within my initial sketches, I poked around, looking for different ways to make navigation and information access easiest for my user persona. Firstly, I had to account for the fact that for each client, there was a variable amount of Arcesium products that they had access to, and for each product, there was data to display. Thus, I consulted with my mentor, and we agreed that a "card" was the best way to display that up-to-date data, as well as provide a way for them to access the product itself.']
+    conceptSketches: [{image: cardsSketches, caption: '"Card" concept'}, {image: layout1, caption: 'Horizontal clicking layout'}, {image: layout2, caption: 'Vertical scrolling w/ fixed bar'}, {image: statusCalloutSketches, caption: 'Status callout feature'}],
+    conceptReflectionParagraphs: ['Within my initial sketches, I poked around, looking for different ways to make navigation and information access easiest for my user persona. Firstly, I had to account for the fact that for each client, there was a variable amount of Arcesium products that they had access to, and for each product, there was data to display. Thus, I consulted with my mentor, and we agreed that a "card" was the best way to display that up-to-date data, as well as provide a way for them to access the product itself.', 'After we had figured this out, I then dove into different ways to format the landing app to display the cards paired with the Arcesium resources. The previous design of the landing application (from before my internship) utilized "left"/"right" arrow clicking to scroll horiontally through the cards. Not only that, but the cards container contained a fixed number of columns (3). Thus, my sketches explored this design, as well as scrolling solutions. Since my user persona values ease-of-use and easy-to-access data, I wanted to avoid the necessity of clicking to navigate to pages. Less clicks = less work.', 'Lastly, I explored data visualizations as well as status displays for each card. For each Arcesium product, the card needs to display the current statuses as well as the visualization of the data itself. Because the status was low-priority, my sketches favored "clicking" on the card to access it. The visualization was immediately visible, of course.']
   };
 
   let iterationObj = {
     isWireframes: true,
     iterations: [
-      {image: conceptSketch1, title: 'Wide Viewport.', overline: 'First Wireframe', description: 'Foo.'},
-      {image: conceptSketch1, title: 'Small Viewport.', overline: 'Second Wireframe', description: 'Foo.'}
+      {image: wideViewport, title: 'Wide Viewport.', overline: 'First Wireframe', description: 'After deciding upon the vertical scrolling layout, I had to decide how the layout would evolve responsively with respect to the viewport. Consulting with my mentor and other stake-holders of the landing application, we decided that the number of columns should increase and decrease with the viewport, with the largest monitors holding four columns'},
+      {image: narrowViewport, title: 'Small Viewport.', overline: 'Second Wireframe', description: 'With the smallest monitors and browser widths, we settled on two columns, wherein the overall landing app dashboard had a minimum fixed-width.'}
     ]
   };
 
   let solutionObj = {
     glamourShotImage: darkMediumDarkBack,
     largeImages: [lightWide, lightMedium, lightSmall],
-    smallImages: [],
+    smallImages: [reconDark, reconLight, lightCallout, darkCallout],
     title: 'Arcesium Landing Application.',
     caption: 'Here are screenshots of the final overall design as well as other features that I implemented within.'
   }
