@@ -45,7 +45,6 @@ const styles = {
   frameSection:css`
     width: 100%;
     padding: 150px 0;
-    background-color: rgb(250,250,250);
   `,
   glamourShotContainer:css`
     margin-bottom: 50px;

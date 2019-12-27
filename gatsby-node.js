@@ -5,3 +5,19 @@
  */
 
 // You can delete this file if you're not using it
+//gatsby-node.js
+const path = require('path');
+
+exports.onCreateWebpackConfig = ({
+  actions,
+}) => {
+  const { setWebpackConfig } = actions;
+  setWebpackConfig({
+    externals: {
+      jquery: 'jQuery', // important: 'Q' capitalized
+    },
+    resolve: {
+      modules: [path.resolve(__dirname, "src"), "node_modules"],
+    }
+  })
+}

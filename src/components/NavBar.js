@@ -79,7 +79,7 @@ const styles = {
   right: 25px;
   background-color: rgb(30,30,30);
   z-index: 100;
-  box-shadow: 0px 0px 5px rgb(0,0,0, .1);
+  box-shadow: 0px 0px 10px rgb(0,0,0, .5);
   `,
   navTab:css`
     min-width: 150px;
@@ -101,10 +101,11 @@ const styles = {
   `,
   navLink:css`
     text-decoration: none;
-    :hover & {
+    cursor: pointer;
+    &:hover {
       text-decoration: none;
     }
-    :visited & {
+    &:hover {
       text-decoration: none;
     }
   `

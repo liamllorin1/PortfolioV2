@@ -23,7 +23,7 @@ export default function CaseStudyFooter(props) {
     <div className = {cx('row', styles.footerSection)}>
       <div class = 'col-2 col-m-1'></div>
       <div class = 'col-8 col-m-10'>
-        <h5 style = {{color: 'rgb(160,160,160)'}}>Thanks for viewing</h5>
+        <h5 style = {{color: 'rgb(160,160,160)'}}>Thanks for visiting</h5>
         <div style = {{display: 'flex'}}>
           <h2 style = {{margin: 0, marginRight: '50px'}} class = 'light'>Back to my projects.</h2>
           <Link to = {'/'} style = {{textDecoration: 'none'}}>

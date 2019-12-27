@@ -5,6 +5,7 @@ export default function HTML(props) {
   return (
     <html {...props.htmlAttributes}>
       <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="stylesheet" href="https://use.typekit.net/cma8rjs.css"/>
         <script src="https://kit.fontawesome.com/9d1d3db7d6.js" crossorigin="anonymous"></script>
@@ -13,7 +14,7 @@ export default function HTML(props) {
         {props.headComponents}
         <title>Liam Llorin</title>
       </head>
-      <body {...props.bodyAttributes} style={{backgroundColor: 'rgb(245, 245,245)', margin: 0, width: '100%', position: 'relative'}}>
+      <body {...props.bodyAttributes} style={{backgroundColor: 'rgb(250, 250,250)', margin: 0, width: '100%', position: 'relative'}}>
         {props.preBodyComponents}
         <noscript key="noscript" id="gatsby-noscript">
           This app works best with JavaScript enabled.

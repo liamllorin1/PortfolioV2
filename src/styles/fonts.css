@@ -1,80 +1,124 @@
-/*Use for page titles*/
+/*generic styling */
+.rightAlign {
+  text-align: right;
+}
+.marginTop1 {
+  margin-top: 200px;
+}
+.marginTop2 {
+  margin-top: 150px;
+}
+.marginTop3 {
+  margin-top: 100px;
+}
+.marginBottom1 {
+  margin-bottom: 200px;
+}
+.marginBottom2 {
+  margin-bottom: 150px;
+}
+.marginBottom3 {
+  margin-bottom: 100px;
+}
+
+/*for now, new css font-size is (2/3) * Xd font-size*/
+h1.title {
+  font-size: 250px;
+}
 h1 {
-  font-size: 55px;
+  font-size: 100px;
   font-family: 'Proxima Nova', 'Avenir';
   font-weight: 800;
-  color: rgb(10,10,10);
-  margin-top: 0;
-  line-height: 130%;
+  margin-bottom: 100px;
+  margin: 0;
+  /* line-height: 130%;*/
 }
-h1.light {
-  color: rgb(245,245,245);
-}
-/*Use for section titles*/
 h2 {
-  font-size: 35px;
+  font-size: 100px;
   font-family: 'Proxima Nova', 'Avenir';
-  font-weight: 700;
-  line-height: 130%;
+  font-weight: 800;
+  /* line-height: 130%;
+  margin: 0;
+  margin-bottom: 20px;/*30px in wireframes but 20px to account for line-height*/
 }
-h2.light {
-  color: rgb(240,240,240);
-}
-h2.dark {
-  color: rgb(15,15,15);
-}
-/*Use for first-level headers within sections*/
 h3 {
-  font-weight: 500;
+  font-weight: 800;
+  font-size: 60px;
+  font-family: 'Proxima Nova', 'Avenir';
+  /* line-height: 130%;
+  margin: 0; */
+}
+h4 {
+  font-weight: bold;
+  font-size: 45px;
+  font-family: 'Proxima Nova', 'Avenir';
+  /* color: rgb(90,90,90);
+  margin: 0;
+  line-height: 140%; */
+}
+h5 {
   font-size: 30px;
   font-family: 'Proxima Nova', 'Avenir';
-  color: rgb(30,30,30);
-  margin-bottom: 50px;
-  line-height: 130%;
-}
-h3.light {
-  color: rgb(225,225,225);
-}
-/*Use for second-level headers*/
-h4 {
-  font-weight: 700;
-  font-size: 23px;
-  font-family: 'Proxima Nova', 'Avenir';
-  color: rgb(50,50,50);
+  font-weight: bold;
+  /* color: rgb(125,125,125);
   margin-top: 0;
+  line-height: 140%; */
 }
-h4.light {
-  color: rgb(205,205,205);
-}
-/*Use for overlines/buttons*/
-h5 {
-  font-size: 15px;
+h6 {/*Use for buttonHeaders*/
+  /* font-size: 30px; */
+  font-size: 20px;
   font-family: 'Proxima Nova', 'Avenir';
-  color: rgb(125,125,125);
-  margin-top: 0;
   font-weight: 600;
-  line-height: 140%;
+  margin-top: 0;
 }
-h5.light {
-  color: rgb(180,180,180)
+h6.overline {
+  font-size: 30px;
+  font-weight: bold;
 }
-h6 {/*Use for captions*/
-  font-size: 12px;
-  font-family: 'Proxima Nova', 'Avenir';
-  color: rgb(30,30,30);
-  font-weight: 500;
+h6.caption {
+  /* font-size: 25px; */
+  font-size: 17px;
+  font-weight: 400;
+  margin: 0;
 }
-h6.light {
-  color: rgb(225,225,225);
-}
-/*Use this exclusively for my paragraph texts*/
 p {
-  color: rgb(100,100,100);
   font-family: 'Proxima Nova', 'Avenir';
-  font-weight: lighter;
-  font-size: 15px;
-  line-height: 140%;
+  font-weight: 400;
+  line-height: 130%;
+  margin-top: 0;
 }
-p.light {
-  color: rgb(190,190,190);
+p.p1 {
+  /* font-size: 40px; */
+  font-size: 27px;
+}
+p.p2 {
+  font-size: 30px;
+}
+/*font colors */
+.lightPrimary {
+  color: rgba(255,255,255,0.90);
+}
+.lightSecondary {
+  color: rgba(255,255,255, 0.75);
+}
+.lightTertiary {
+  color: rgb(255,255,255, 0.6);
+}
+.lightDisabled {
+  color: rgba(255,255,255, 0.30);
+}
+.darkPrimary {
+  color: rgba(255,255,255,0.90);
+}
+.darkSecondary {
+  color: rgba(255,255,255, 0.75);
+}
+.darkTertiary {
+  color: rgba(255,255,255, 0.60);
+}
+.darkDisabled {
+  color: rgba(255,255,255, 0.30);
+}
+.darkFaded {
+  color: rgba(255,255,255, 0.10);
 }
