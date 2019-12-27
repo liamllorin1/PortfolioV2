@@ -31,7 +31,7 @@ export default function DesignResearchSection(props) {
       {userAssessmentParagraphs && <div class = 'row'>
         <div class = 'col-4 col-m-3'></div>
         <div class = 'col-4 col-m-6' style = {{marginBottom: '50px'}}>
-          <h4>{userPersonas ? 'User Personas Reflection.' : 'User Interview Assessment.'}</h4>
+          <h4>{userPersonas ? 'User Personas Reflection.' : 'User Interview Insights.'}</h4>
           {userAssessmentParagraphs.map(paragraphText => {
             return <p>{paragraphText}</p>;
           })}
@@ -69,7 +69,7 @@ export default function DesignResearchSection(props) {
 
 const styles = {
   DesignResearchContainer:css`
-    padding: 150px 0;
+    padding-bottom: 150px;
   `,
   howMightText:css`
     font-weight: 700;

@@ -16,6 +16,8 @@ h2 {
   font-family: 'Proxima Nova', 'Avenir';
   font-weight: 700;
   line-height: 130%;
+  margin: 0;
+  margin-bottom: 20px;/*30px in wireframes but 20px to account for line-height*/
 }
 h2.light {
   color: rgb(240,240,240);
@@ -25,30 +27,31 @@ h2.dark {
 }
 /*Use for first-level headers within sections*/
 h3 {
-  font-weight: 500;
-  font-size: 30px;
+  font-weight: semibold;
+  font-size: 24px;
   font-family: 'Proxima Nova', 'Avenir';
   color: rgb(30,30,30);
-  margin-bottom: 50px;
   line-height: 130%;
+  margin: 0;
 }
 h3.light {
   color: rgb(225,225,225);
 }
 /*Use for second-level headers*/
 h4 {
-  font-weight: 700;
-  font-size: 23px;
+  font-weight: 400;
+  font-size: 20px;
   font-family: 'Proxima Nova', 'Avenir';
-  color: rgb(50,50,50);
-  margin-top: 0;
+  color: rgb(90,90,90);
+  margin: 0;
+  line-height: 140%;
 }
 h4.light {
   color: rgb(205,205,205);
 }
 /*Use for overlines/buttons*/
 h5 {
-  font-size: 15px;
+  font-size: 14px;
   font-family: 'Proxima Nova', 'Avenir';
   color: rgb(125,125,125);
   margin-top: 0;
@@ -69,11 +72,12 @@ h6.light {
 }
 /*Use this exclusively for my paragraph texts*/
 p {
-  color: rgb(100,100,100);
+  color: rgb(80,80,80);
   font-family: 'Proxima Nova', 'Avenir';
   font-weight: lighter;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 140%;
+  margin-top: 0;
 }
 p.light {
   color: rgb(190,190,190);

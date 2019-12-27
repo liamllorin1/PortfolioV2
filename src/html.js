@@ -13,7 +13,7 @@ export default function HTML(props) {
         {props.headComponents}
         <title>Liam Llorin</title>
       </head>
-      <body {...props.bodyAttributes} style={{backgroundColor: 'rgb(245, 245,245)', margin: 0, width: '100%', position: 'relative'}}>
+      <body {...props.bodyAttributes} style={{backgroundColor: 'rgb(250, 250,250)', margin: 0, width: '100%', position: 'relative'}}>
         {props.preBodyComponents}
         <noscript key="noscript" id="gatsby-noscript">
           This app works best with JavaScript enabled.

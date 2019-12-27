@@ -8,7 +8,7 @@ import "../styles/desktopSpacing.css"
 import SkillTag from "../components/SkillTag"
 import HandCoded from '../components/HandCoded'
 import ButtonBold from '../components/ButtonBold'
-import resumeFile from '../../DesignResume(11-7-19).pdf'
+import resumeFile from '../../DesignResume(12-18-19).pdf'
 
 export default function StandardSection(props) {
   let { title, caption, sectionId, textColor, image, leftGradient, rightGradient, button, skillTags, resume } = props.sectionObj;

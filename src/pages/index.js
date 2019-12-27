@@ -16,6 +16,8 @@ import strongSuitTop from '../images/WebsiteScreenshots/strongSuitTopFramed.jpg'
 import oaxacanKitchenMobile from '../images/OaxacanKitchen/oaxacanKitchenMobile.jpg'
 import cameras from '../images/cameras.jpg'
 import arcesium from '../images/arcesium.jpg'
+import comingSoon from '../images/comingSoon.png'
+import agyleCover from '../images/Agyle/AgyleCover.png'
 import ButtonBold from '../components/ButtonBold'
 import ButtonFaint from '../components/ButtonFaint'
 import Footer from '../components/Footer'
@@ -48,8 +50,23 @@ let sections = [
     ]
   },
   {
+    title: "Agyle Mobile App Design.",
+    caption: "This Fall, I interviewed emerging professional soccer players before designing Agyl to help bridge the gap between professionals and agents in the wider soccer market.",
+    leftGradient: "linear-gradient(45deg, rgb(247, 247, 247), rgb(255, 255, 255))",
+    rightGradient: "linear-gradient(45deg, #3731FF, #2A24BF)",
+    image: agyleCover,
+    textColor: 'dark',
+    sectionId: "techSection",
+    button: <Link to = {'/AgyleCaseStudy/'} style = {{textDecoration: 'none'}}><ButtonBold titleColor = "rgb(240,240,240)" buttonColor = "rgb(20,20,20)" title = {"Find out more"} toPage={'/WIPPage/'}/></Link>,
+    skillTags: [
+      { textColor: 'rgb(20,20,20)', tagColor: 'rgb(250,250,250)', title: 'Mobile Design'},
+      { textColor: 'rgb(20,20,20)', tagColor: 'rgb(250,250,250)', title: 'UI/UX'},
+      { textColor: 'rgb(20,20,20)', tagColor: 'rgb(250,250,250)', title: 'User Research'},
+    ]
+  },
+  {
     title: "Arcesium UI/UX Engineer.",
-    caption: "Last summer, I designed a React application for hedge-fund clients (J.P. Morgan, D.E. Shaw, Morgan Stanley, etc.) conducting post-trade activities. I built out content configurability, business-interval setting, dark/light theme styling within landing page.",
+    caption: "Last summer, I designed a React web landing application for hedge-fund clients (J.P. Morgan, D.E. Shaw, Morgan Stanley, etc.) conducting post-trade activities. I built out content configurability, business-interval setting, dark/light theme styling within landing page.",
     leftGradient: "linear-gradient(45deg, rgb(247, 247, 247), rgb(255, 255, 255))",
     rightGradient: "linear-gradient(45deg, rgb(100, 191, 255), rgb(70, 151, 215))",
     image: arcesium,
@@ -60,20 +77,6 @@ let sections = [
       { textColor: 'rgb(20,20,20)', tagColor: 'rgb(250,250,250)', title: 'Web Dev/Design'},
       { textColor: 'rgb(20,20,20)', tagColor: 'rgb(250,250,250)', title: 'UI/UX'},
       { textColor: 'rgb(20,20,20)', tagColor: 'rgb(250,250,250)', title: 'React'},
-    ]
-  },
-  {
-    title: "STRONGSUIT Web Design Freelance Business.",
-    caption: "In late 2017, I designed 4 responsive sites for business and clients (landing pages/personal sites). These sites I developed in HTML, CSS, Sass, Javascript, jQuery, and some Python for 300+ hours for clients.",
-    leftGradient: "linear-gradient(45deg, rgb(247, 247, 247), rgb(255, 255, 255))",
-    rightGradient: "linear-gradient(45deg, rgb(58, 67, 84), rgb(58, 67, 84))",
-    image: strongSuitTop,
-    textColor: 'dark',
-    button: <Link to = {'/StrongsuitCaseStudy/'} style = {{textDecoration: 'none'}}><ButtonBold titleColor = "rgb(240,240,240)" buttonColor = "rgb(20,20,20)" title = {"Find out more"} toPage={'/WIPPage/'}/></Link>,
-    skillTags: [
-      { textColor: 'rgb(20,20,20)', tagColor: 'rgb(250,250,250)', title: 'Web Dev/Design'},
-      { textColor: 'rgb(20,20,20)', tagColor: 'rgb(250,250,250)', title: 'UI/UX'},
-      { textColor: 'rgb(20,20,20)', tagColor: 'rgb(250,250,250)', title: 'HTML/CSS/JS'},
     ]
   },
   {
