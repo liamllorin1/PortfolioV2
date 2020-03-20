@@ -22,6 +22,6 @@ export default function IndexPageIntroSection(props) {
 
 const styles = {
   introSectionContainer:css`
-    padding-top: 25px;
+    padding-top: 50px;
   `
 }

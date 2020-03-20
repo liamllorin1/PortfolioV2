@@ -40,6 +40,10 @@
   .col-3 {
     width: 25%; }
 
+  .col-vw-3 {
+    width: 25vw;
+  }
+
   .col-4 {
     width: 33.33%; }
 
@@ -49,8 +53,16 @@
   .col-6 {
     width: 50%; }
 
+  .col-vw-6 {
+    width: 50vw
+  }
+
   .col-7 {
     width: 58.33%; }
+
+  .col-vw-7 {
+    width: 58.33vw
+  }
 
   .col-8 {
     width: 66.66%; }

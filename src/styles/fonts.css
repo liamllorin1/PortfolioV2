@@ -1,15 +1,45 @@
 /*generic styling */
+.noScrollBar::-webkit-scrollbar {
+  display: none;
+}
 .rightAlign {
   text-align: right;
 }
+.centerAlign {
+  text-align: center;
+}
+.italic {
+  font-style: italic;
+}
 .marginTop1 {
-  margin-top: 200px;
+  padding-top: 200px;
 }
 .marginTop2 {
   margin-top: 150px;
 }
 .marginTop3 {
   margin-top: 100px;
+}
+.marginTop4 {
+  margin-top: 50px;
+}
+.marginTop5 {
+  margin-top: 30px;
+}
+.marginTop6 {
+  margin-top: 20px;
+}
+.marginTop7 {
+  margin-top: 15px;
+}
+.marginTop8 {
+  margin-top: 10px;
+}
+.marginTop9 {
+  margin-top: 5px;
+}
+.marginTop10 {
+  margin-top: 0;
 }
 .marginBottom1 {
   margin-bottom: 200px;
@@ -23,7 +53,8 @@
 
 /*for now, new css font-size is (2/3) * Xd font-size*/
 h1.title {
-  font-size: 250px;
+  /* font-size: 250px; */
+  font-size: 167px;
 }
 h1 {
   font-size: 100px;
@@ -34,65 +65,78 @@ h1 {
   /* line-height: 130%;*/
 }
 h2 {
-  font-size: 100px;
+  /* font-size: 100px; */
+  font-size: 67px;
   font-family: 'Proxima Nova', 'Avenir';
   font-weight: 800;
-  /* line-height: 130%;
   margin: 0;
+  /* line-height: 130%;
   margin-bottom: 20px;/*30px in wireframes but 20px to account for line-height*/
 }
 h3 {
+  margin: 0;
   font-weight: 800;
-  font-size: 60px;
+  /* font-size: 60px; */
+  font-size: 40px;
   font-family: 'Proxima Nova', 'Avenir';
   /* line-height: 130%;
   margin: 0; */
 }
 h4 {
   font-weight: bold;
-  font-size: 45px;
+  /* font-size: 45px; */
+  font-size: 30px;
   font-family: 'Proxima Nova', 'Avenir';
-  /* color: rgb(90,90,90);
   margin: 0;
-  line-height: 140%; */
 }
 h5 {
-  font-size: 30px;
+  margin: 0;
+  /* font-size: 30px; */
+  font-size: 20px;
   font-family: 'Proxima Nova', 'Avenir';
   font-weight: bold;
   /* color: rgb(125,125,125);
-  margin-top: 0;
-  line-height: 140%; */
+  margin-top: 0;*/
+  line-height: 130%;
 }
 h6 {/*Use for buttonHeaders*/
   /* font-size: 30px; */
   font-size: 20px;
   font-family: 'Proxima Nova', 'Avenir';
   font-weight: 600;
-  margin-top: 0;
+  margin: 0;
 }
 h6.overline {
-  font-size: 30px;
-  font-weight: bold;
+  /* font-size: 30px; */
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
 }
 h6.caption {
   /* font-size: 25px; */
-  font-size: 17px;
-  font-weight: 400;
-  margin: 0;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 600;
+}
+h6.navText {
+  font-size: 14px;
+  font-weight: 500;
+  text-align: right;
 }
 p {
   font-family: 'Proxima Nova', 'Avenir';
   font-weight: 400;
-  line-height: 130%;
-  margin-top: 0;
+  line-height: 135%;
+  margin: 0;
 }
 p.p1 {
   /* font-size: 40px; */
-  font-size: 27px;
+  font-size: 25px;
 }
 p.p2 {
-  font-size: 30px;
+  /* font-size: 30px; */
+  font-size: 20px;
+  font-weight: 500;
 }
 /*font colors */
 .lightPrimary {
@@ -102,23 +146,29 @@ p.p2 {
   color: rgba(255,255,255, 0.75);
 }
 .lightTertiary {
-  color: rgb(255,255,255, 0.6);
+  color: rgba(255,255,255, 0.6);
 }
 .lightDisabled {
   color: rgba(255,255,255, 0.30);
 }
 .darkPrimary {
-  color: rgba(255,255,255,0.90);
+  color: rgba(0,0,0,0.90);
 }
 .darkSecondary {
-  color: rgba(255,255,255, 0.75);
+  color: rgba(0,0,0, 0.75);
 }
 .darkTertiary {
-  color: rgba(255,255,255, 0.60);
+  color: rgba(0,0,0, 0.60);
 }
 .darkDisabled {
-  color: rgba(255,255,255, 0.30);
+  color: rgba(0,0,0, 0.30);
 }
 .darkFaded {
-  color: rgba(255,255,255, 0.10);
+  color: rgba(0,0,0, 0.10);
+}
+.darkAccent {
+  color: #61DEC7;
+}
+.lightAccent {
+  color: #24D8B5;
 }

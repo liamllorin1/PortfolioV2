@@ -12,7 +12,7 @@ export default function DevDesignTag(props) {
   let {} = props;
   return(
     <div className = {styles.tagContainer}>
-      <h6 className = {cx('caption', 'lightTertiary')}>Designed / developed by Liam Llorin</h6>
+      <h6 className = {cx('navText', 'lightTertiary')}>Designed + developed by Liam Llorin</h6>
     </div>
   )
 }

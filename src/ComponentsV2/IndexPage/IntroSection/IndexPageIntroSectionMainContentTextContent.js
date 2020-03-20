@@ -16,15 +16,15 @@ export default function IndexPageIntroSectionMainContentTextContent(props) {
     <div className = {cx('row')}>
       <div className = {'col-1'}></div>
       <div className = {'col-7'}>
-        <h1 className = {cx('lightPrimary', 'marginTop3')}>Welcome to my portfolio.</h1>
+        <h1 className = {cx('lightPrimary', 'marginTop2')}>Welcome to my portfolio.</h1>
       </div>
       <div className = {'col-4'}></div>
     </div>
     <div className = {cx('row')}>
       <div className = {'col-1'}></div>
-      <div className = {'col-3'}>
+      <div className = {'col-4'}>
         <p className = {cx('p1', 'lightTertiary', 'marginTop3')}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          I'm a 2021 Stanford grad studying Computer Science and Product Design pursuing Design at Apple. Find me behind my Sony a7iii, in Stanford's Product Realization Lab, or on awwwards.com exploring what I love!
         </p>
       </div>
     </div>
