@@ -11,6 +11,15 @@
 .marginTop3 {
   margin-top: 100px;
 }
+/* .marginTop4 {
+  margin-top: 50px;
+}
+.marginTop5 {
+  margin-top: 30px;
+} */
+.marginTop6 {
+  margin-top: 20px;
+}
 .marginBottom1 {
   margin-bottom: 200px;
 }
@@ -50,11 +59,11 @@ h3 {
 }
 h4 {
   font-weight: bold;
-  font-size: 45px;
+  /* font-size: 45px; */
+  font-size: 30px;
   font-family: 'Proxima Nova', 'Avenir';
-  /* color: rgb(90,90,90);
   margin: 0;
-  line-height: 140%; */
+  line-height: 130%;
 }
 h5 {
   font-size: 30px;
@@ -72,8 +81,11 @@ h6 {/*Use for buttonHeaders*/
   margin-top: 0;
 }
 h6.overline {
-  font-size: 30px;
+  /* font-size: 30px; */
+  font-size: 20px;
   font-weight: bold;
+  margin: 0;
+  margin-bottom: 10px;
 }
 h6.caption {
   /* font-size: 25px; */
@@ -121,4 +133,7 @@ p.p2 {
 }
 .darkFaded {
   color: rgba(255,255,255, 0.10);
+}
+.darkAccent {
+  color: #61DEC7;
 }

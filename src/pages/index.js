@@ -4,43 +4,46 @@ import { css, cx } from 'emotion'
 import styleConstants from "../styles/styleConstants.js"
 import SEO from "../components/seo"
 import IndexPageIntroSection from '../ComponentsV2/IndexPage/IndexPageIntroSection.js'
+import IndexPageProjectsSection from '../ComponentsV2/IndexPage/IndexPageProjectsSection.js'
 import IndexPageProjectsSectionHeader from '../ComponentsV2/IndexPage/IndexPageProjectsSectionHeader.js'
+import IndexPagePhotographySection from 'ComponentsV2/IndexPage/IndexPagePhotographySection.js'
 import ButtonBold from '../components/ButtonBold'
 import profPic from '../images/ProfPic5.jpg'
-
-let sections = [
-  {
-    title: "Liam Llorin.",
-    caption: "Find me behind my Canon 6D, in the Product Realization Lab at Stanford, or on awwwards.com exploring what I love.",
-    leftGradient: "linear-gradient(45deg, rgb(15, 15, 15), rgb(45, 45, 45))",
-    rightGradient: "linear-gradient(45deg, rgb(30, 30, 30), rgb(15, 15, 15))",
-    sectionId: "topSection",
-    image: profPic,
-    textColor: 'light',
-    button: <Link to = {'/About/'} style = {{textDecoration: 'none'}}><ButtonBold buttonColor = "rgb(240,240,240)" titleColor = "rgb(20,20,20)" title = {"Find out more"}/></Link>,
-    resume: true
-  }
-]
 
 //to add: <WIP/> as necessary
 const IndexPage = () => {
   const styles = {
-    indexPageContainer:css`
+    indexPageIntroSectionContainer:css`
       background-color: ${styleConstants.darkBack1};
-      height: 100%;
-      width: 100%;
-      min-height: 100vh;
       padding-left: ${styleConstants.desktopMargin}px;
       padding-right: ${styleConstants.desktopMargin}px;
       box-sizing: border-box;
+    `,
+    indexPageProjectsSectionContainer:css`
+      background-color: ${styleConstants.darkBack2};
+      padding-left: ${styleConstants.desktopMargin}px;
+      padding-right: ${styleConstants.desktopMargin}px;
+      box-sizing: border-box;
+      padding-bottom: 150px;
+    `,
+    indexPagePhotographySectionContainer:css`
+      background-color: ${styleConstants.darkBack1};
+      padding-left: ${styleConstants.desktopMargin}px;
+      padding-right: ${styleConstants.desktopMargin}px;
     `
   }
   return (
   <>
-    <div className = {styles.indexPageContainer}>
+    <div className = {styles.indexPageIntroSectionContainer}>
       <IndexPageIntroSection/>
     </div>
     <IndexPageProjectsSectionHeader/>
+    <div className = {styles.indexPageProjectsSectionContainer}>
+      <IndexPageProjectsSection/>
+    </div>
+    <div className = {styles.indexPagePhotographySectionContainer}>
+      <IndexPagePhotographySection/>
+    </div>
     <SEO title="Home" />
   </>
 )};

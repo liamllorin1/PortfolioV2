@@ -20,7 +20,7 @@ export default function IndexPageIntroSectionMainContent(props) {
       <div className = {cx(styles.imageContentContainer)}>
       <div className = {cx('row')}>
         <div className = {'col-5'}></div>
-        <div className = {'col-6'}>
+        <div className = {'col-6'} style = {{position: 'relative'}}>
           <div className = {cx('marginTop3', styles.imageBack)}>
             <img src={profilePicture} className = {cx(styles.profilePicture)}/>
             <div className = {cx(styles.imageOverlay)}></div>
@@ -36,18 +36,18 @@ export default function IndexPageIntroSectionMainContent(props) {
 
 const styles = {
   imageBack:css`
-    background: linear-gradient(325deg, #61DEC7, #0E0912 40%);
-    padding: 10px;
+    background: linear-gradient(305deg, #61DEC7, #0E0912 40%);
     position: relative;
-    right: -10px;
+    left: 10px;
+    top: 10px;
   `,
   imageOverlay:css`
-    background: linear-gradient(90deg, rgba(0,0,0,.84), rgba(0,0,0,0.0) 35%);
-    width: calc(100% - 20px);
-    height: calc(100% - 20px);
+    background: linear-gradient(90deg, rgba(14, 9, 18,.84), rgba(14, 9, 18,0.0) 35%);
+    width: 100%;
+    height: 100%;
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: -10px;
+    right: 10px;
   `,
   mainContentContainer:css`
     position: relative;
@@ -64,5 +64,8 @@ const styles = {
   profilePicture:css`
     width: 100%;
     display: block;
+    top: -10px;
+    right: 10px;
+    position: relative;
   `
 }

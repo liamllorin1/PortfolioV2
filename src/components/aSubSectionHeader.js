@@ -34,6 +34,10 @@ const styles = {
   rectangle:css`
     width: 30px;
     height: 5px;
+<<<<<<< HEAD
+=======
+    background-color: rgb(30, 30, 30);
+>>>>>>> 31ac2a8e8c1fa4655222f6c07ab34e74bf5f7b44
     margin: 0;
     margin-top: 3px;
   `
